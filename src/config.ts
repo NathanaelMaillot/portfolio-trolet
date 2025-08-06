@@ -1,6 +1,6 @@
 aexport const siteConfig = {
   name: "Nathanaël Maillot",
-  title: "Mechanical Engineer /n CTO - Trolet",
+  title: "Mechanical Engineer",
   description: "Portfolio of Nathanaël Maillot",
   accentColor: "#1d4ed8",
   social: {
