@@ -1,7 +1,7 @@
 aexport const siteConfig = {
-  name: "Nathanaël Maillot",
+  name: "Nathanael Maillot",
   title: "Mechanical Engineer",
-  description: "Portfolio of Nathanaël Maillot",
+  description: "Portfolio of Nathanael Maillot",
   accentColor: "#1d4ed8",
   social: {
     email: "nathanaelmaillot@trolet.ca",
@@ -68,7 +68,7 @@ aexport const siteConfig = {
   ],
   education: [
     {
-      school: "Polytechnique Montréal",
+      school: "Polytechnique Montreal",
       degree: "Bachelor of Engineering in Mechanical Engineering",
       dateRange: "2021 - 2025",
       achievements: [
