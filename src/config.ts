@@ -1,13 +1,12 @@
-export const siteConfig = {
+aexport const siteConfig = {
   name: "Nathanaël Maillot",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  title: "Mechanical Engineer /n CTO - Trolet",
+  description: "Portfolio of Nathanaël Maillot",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "nathanaelmaillot@trolet.ca",
+    linkedin: "https://www.linkedin.com/in/nathanaelmaillot30/",
+    github: "https://github.com/NathanaelMaillot",
   },
   aboutMe:
     "Maillot",
@@ -37,11 +36,11 @@ export const siteConfig = {
   ],
   experience: [
     {
-      company: "Trolet Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Trolet",
+      title: "Chief Technical Officer",
+      dateRange: "Aug 2024 - Present",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
+        "Led development of of microservices architecture serving 1M+ users",
         "Reduced API response times by 40% through optimization",
         "Mentored team of 5 junior developers",
       ],
@@ -69,9 +68,9 @@ export const siteConfig = {
   ],
   education: [
     {
-      school: "University Trolet",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "Polytechnique Montréal",
+      degree: "Bachelor of Engineering in Mechanical Engineering",
+      dateRange: "2021 - 2025",
       achievements: [
         "Graduated Magna Cum Laude with 3.8 GPA",
         "Dean's List all semesters",
