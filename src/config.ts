@@ -1,4 +1,4 @@
-aexport const siteConfig = {
+export const siteConfig = {
   name: "Nathanael Maillot",
   title: "Mechanical Engineer",
   description: "Portfolio of Nathanael Maillot",
