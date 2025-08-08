@@ -103,7 +103,7 @@ export const siteConfig = {
   awardsAndCompetitions: [
     {
       year: 2024,
-      title: "Stantec Diversity & Inclusion Scholarship",
+      title: "Stantec Equity & Diversity Scholarship",
       description: "Awarded by Stantec to recognize leadership and contributions promoting diversity and inclusion in engineering.",
       awardedBy: "Stantec",
     },
@@ -116,19 +116,19 @@ export const siteConfig = {
     {
       year: 2024,
       title: "Force Avenir – Innovation Competition",
-      description: "Selected for innovative design of the automated shoe cleaning machine.",
+      description: "Selected for innovative design of the automated shoe cleaning machine for second hand industry.",
       awardedBy: "Polytechnique Montréal",
     },
     {
       year: 2023,
       title: "Force Avenir – Innovation Competition",
-      description: "Selected for innovative design of the automated shoe cleaning machine.",
+      description: "Selected for innovative design of the automated shoe cleaning machine for commercial use.",
       awardedBy: "Polytechnique Montréal",
     },
     {
       year: 2022,
-      title: "RoboMaster North America – 3rd Place",
-      description: "Achieved 3rd place as part of Polystar technical society, designing and operating a competition robot.",
+      title: "RoboMaster North America division – 3rd Place",
+      description: "Achieved 3rd place for performance as part of Polystar technical society. International robotics competition where teams design, build, and operate robots for high-speed, strategy-based matches.",
       awardedBy: "DJI RoboMaster Competition",
     },
     {
@@ -140,7 +140,7 @@ export const siteConfig = {
     {
       year: 2017,
       title: "Olympiades des Sciences de l'Ingénieur – Regional",
-      description: "2nd place in La Réunion for an automated cardiac massage device, qualifying for the national competition.",
+      description: "2nd place in Réunion Island for an automated cardiac massage device, qualifying for the national competition.",
       awardedBy: "Académie de La Réunion",
     }
   ]
