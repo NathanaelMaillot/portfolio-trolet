@@ -85,7 +85,8 @@ body {
   pointer-events: none;
   position: absolute;
   background: conic-gradient(from 180deg at 50% 70%,
-nt-color-light) 0deg,
+
+      var(--accent-color-light) 0deg,
       var(--accent-color) 72deg,
       var(--accent-color-light) 144deg,
       var(--accent-color-dark) 216deg,
@@ -108,3 +109,15 @@ nt-color-light) 0deg,
   mask-clip: padding-box, border-box;
   mask-composite: intersect;
 }
+
+
+/* Additional hover style for education cards */
+.edu-card-hover::after {
+  box-shadow: 0 0 0 0 var(--accent-color);
+  transition: opacity 1s, box-shadow 0.3s;
+}
+
+.edu-card-hover:hover::after {
+  box-shadow: 0 0 0 3px var(--accent-color);
+}
+

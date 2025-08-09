@@ -28,7 +28,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 {siteConfig.education.map((edu) => (
                 <div class="glow-container">
                   <article
-                    class="glow-card bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-all duration-300 relative cursor-pointer"
+                    class="glow-card edu-card-hover group transform transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:border-[var(--accent-color)] bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md relative cursor-pointer"
+
                   >
                     <div class="glows"></div>
                     <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
