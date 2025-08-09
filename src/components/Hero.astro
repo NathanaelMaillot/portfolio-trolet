@@ -144,10 +144,10 @@ import { siteConfig } from "../config";
         >
       </h1>
       <p
+        id="typing-title"
         class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
-      >
-        {siteConfig.title}
-      </p>
+        data-title={siteConfig.title}
+      ></p>
     </div>
   </div>
   <div
@@ -273,6 +273,19 @@ import { siteConfig } from "../config";
     }
   </div>
 </div>
+<script is:inline>
+  const el = document.getElementById('typing-title');
+  const text = el?.dataset.title ?? '';
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 75);
+    }
+  }
+  type();
+</script>
 
 <style>
   @keyframes fadeIn {
@@ -301,5 +314,16 @@ import { siteConfig } from "../config";
 
   .animation-delay-600 {
     animation-delay: 0.6s;
+  }
+
+  #typing-title::after {
+    content: '|';
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 </style>
