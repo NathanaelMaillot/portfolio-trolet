@@ -4,6 +4,7 @@ body {
   font-family: 'IBM Plex Mono', monospace;
 }
 
+
 /* Glow card effect */
 .glow-container {
   --spread: 60;
@@ -31,12 +32,14 @@ body {
   --alpha: 0;
   content: "";
   background: conic-gradient(from 180deg at 50% 70%,
+
       var(--accent-color-light) 0deg,
       var(--accent-color) 72deg,
       var(--accent-color-light) 144deg,
       var(--accent-color-dark) 216deg,
       var(--accent-color) 288deg,
       #ffffff 1turn);
+
   background-attachment: fixed;
   position: absolute;
   inset: -5px;
@@ -60,7 +63,9 @@ body {
   content: "";
   border-radius: 12px;
   pointer-events: none;
+
   background: var(--accent-color-light);
+
   background-attachment: fixed;
   border-radius: 12px;
   mask: linear-gradient(#0000, #0000),
@@ -80,12 +85,14 @@ body {
   pointer-events: none;
   position: absolute;
   background: conic-gradient(from 180deg at 50% 70%,
+
       var(--accent-color-light) 0deg,
       var(--accent-color) 72deg,
       var(--accent-color-light) 144deg,
       var(--accent-color-dark) 216deg,
       var(--accent-color) 288deg,
       #ffffff 1turn);
+
   background-attachment: fixed;
   border-radius: 12px;
   opacity: var(--active, 0);
@@ -103,6 +110,7 @@ body {
   mask-composite: intersect;
 }
 
+
 /* Additional hover style for education cards */
 .edu-card-hover::after {
   box-shadow: 0 0 0 0 var(--accent-color);
@@ -112,3 +120,4 @@ body {
 .edu-card-hover:hover::after {
   box-shadow: 0 0 0 3px var(--accent-color);
 }
+
