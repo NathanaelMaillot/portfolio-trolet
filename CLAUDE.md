@@ -61,4 +61,4 @@ The `src/config.ts` exports a `siteConfig` object with these sections:
 - skills: string[]
 - projects: array of {name, description, link, skills}
 - experience: array of {company, title, dateRange, bullets}
-- education: array of {school, degree, dateRange, achievements}
+- education: array of {school, degree, dateRange, achievements, logo?}
