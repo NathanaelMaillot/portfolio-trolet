@@ -24,6 +24,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
           <div class="lg:col-span-8">
             <div class="space-y-8">
+
 {siteConfig.education.map((edu) => (
                 <div class="glow-container">
                   <article
@@ -59,7 +60,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                     <ul class="space-y-2">
                       {edu.achievements.map((achievement) => (
                         <li class="flex items-start">
+
                           <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mt-2 mr-3 flex-shrink-0" />
+
                           <span class="text-sm sm:text-base text-gray-600">
                             {achievement}
                           </span>
