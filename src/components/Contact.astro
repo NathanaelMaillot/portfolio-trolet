@@ -20,18 +20,9 @@ const formEndpoint = `https://formsubmit.co/ajax/${encodeURIComponent(
 
       <div class="lg:col-span-8 space-y-8">
         <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
-          Feel free to reach out for collaborations or just a friendly hello.
+          Feel free to reach out.
         </p>
-        <a
-          href={`mailto:${siteConfig.social.email}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block px-6 py-3 text-lg font-medium text-white rounded-lg"
-          style={`background-color: ${siteConfig.accentColor}`}
-        >
-          Contactez-moi
-        </a>
-
+        
         <form
           id="contact-form"
           action={formEndpoint}
