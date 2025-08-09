@@ -1,5 +1,10 @@
 # Changelog
 
+### 2.1.0
+
+- Added optional institution logos to the education section
+- Updated Polytechnique Montréal logo to use Cloudinary-hosted image
+
 ### 2.0.0
 
 - Complete rewrite of the template using Astro and Tailwind
