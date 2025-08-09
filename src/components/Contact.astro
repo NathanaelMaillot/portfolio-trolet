@@ -1,5 +1,8 @@
 ---
 import { siteConfig } from "../config";
+const formEndpoint = `https://formsubmit.co/ajax/${encodeURIComponent(
+  siteConfig.social.email
+)}?formOrigin=portfolio`;
 ---
 
 <section id="contact" class="p-8 sm:p-12 md:p-16 lg:p-24">
@@ -19,14 +22,67 @@ import { siteConfig } from "../config";
         <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
           Feel free to reach out for collaborations or just a friendly hello.
         </p>
-        <a
-          href={`mailto:${siteConfig.social.email}`}
-          class="inline-block px-6 py-3 text-lg font-medium text-white rounded-lg"
-          style={`background-color: ${siteConfig.accentColor}`}
+        <form
+          id="contact-form"
+          action={formEndpoint}
+          method="POST"
+          class="space-y-4"
         >
-          Contactez-moi
-        </a>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            class="w-full p-3 border border-gray-300 rounded-lg"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="w-full p-3 border border-gray-300 rounded-lg"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            required
+            class="w-full p-3 border border-gray-300 rounded-lg"
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 text-lg font-medium text-white rounded-lg"
+            style={`background-color: ${siteConfig.accentColor}`}
+          >
+            Send Message
+          </button>
+        </form>
+        <p id="form-status" class="text-sm text-gray-600"></p>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    status.textContent = "Sending...";
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        status.textContent = "Message sent successfully!";
+        form.reset();
+      } else {
+        status.textContent = "Failed to send message.";
+      }
+    } catch (err) {
+      status.textContent = "Failed to send message.";
+    }
+  });
+</script>
