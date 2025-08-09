@@ -4,9 +4,6 @@
 
 - Added optional institution logos to the education section
 
-- Updated Polytechnique Montréal logo to use Google Drive hosted image
-
-
 ### 2.0.0
 
 - Complete rewrite of the template using Astro and Tailwind
