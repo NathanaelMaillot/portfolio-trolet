@@ -3,7 +3,6 @@
 ### 2.1.0
 
 - Added optional institution logos to the education section
-- Updated Polytechnique Montréal logo to use Cloudinary-hosted image
 
 ### 2.0.0
 
