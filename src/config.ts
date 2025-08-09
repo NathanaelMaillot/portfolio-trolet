@@ -11,16 +11,34 @@ export const siteConfig = {
   aboutMe:
     "Graduate in Mechanical Engineering from Polytechnique Montréal, I lead technology strategy and innovation at Trolet, where I design and implement systems that transform second-hand footwear operations. My work spans hands-on mechanical design, automation engineering, RFID integration, and process optimization. I have personally developed custom machines, automated workflows, and operational infrastructures, while also managing cross-disciplinary projects in AI, chemistry, and R&D.",
   skills: [
-    "Mechanical Design & Fabrication",
-    "Automation Engineering",
-    "Prototyping & Testing",
-    "RFID Systems Integration",
-    "User Interface Planning",
-    "Technology Strategy",
-    "R&D Coordination",
-    "Process Optimization",
-    "Industrial Workflow Design",
-    "Team & Project Leadership"
+    {
+      category: "Mechanical",
+      color: "bg-red-100 text-red-800",
+      items: [
+        "Mechanical Design & Fabrication",
+        "Prototyping & Testing"
+      ]
+    },
+    {
+      category: "Systems & Automation",
+      color: "bg-green-100 text-green-800",
+      items: [
+        "Automation Engineering",
+        "RFID Systems Integration",
+        "User Interface Planning",
+        "Industrial Workflow Design"
+      ]
+    },
+    {
+      category: "Ops & Strategy",
+      color: "bg-blue-100 text-blue-800",
+      items: [
+        "Technology Strategy",
+        "R&D Coordination",
+        "Process Optimization",
+        "Team & Project Leadership"
+      ]
+    }
   ],
   projects: [
     {
