@@ -3,3 +3,16 @@
 body {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+.edu-card-hover {
+  @apply relative;
+}
+
+.edu-card-hover::after {
+  content: "";
+  @apply absolute inset-0 border border-transparent transition-colors duration-300 pointer-events-none;
+}
+
+.edu-card-hover:hover::after {
+  border-color: var(--accent-color);
+}
