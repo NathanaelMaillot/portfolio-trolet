@@ -108,7 +108,8 @@ export const siteConfig = {
       school: "Polytechnique Montréal",
       degree: "Bachelor of Engineering – Mechanical Engineering (Graduate)",
       dateRange: "2021 – 2025",
-      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQG-IE6mi_1i0g/company-logo_200_200/company-logo_200_200/0/1659037608019?e=2147483647&v=beta&t=-MXxaAXsMpCg8EoRBN75IZ-Q0GBa_5XtqUEUWhHHEzo",
+      logo: "https://drive.google.com/uc?export=view&id=1LZvZvBNhFNipsTIO22A5rge21Uzlm6Wq",
+
       achievements: [
         "Recipient – Perseverance Scholarship (2023) – Family J.W. McConnell / Polytechnique Montréal",
         "Recipient – Stantec Diversity & Inclusion Scholarship (2024)",
