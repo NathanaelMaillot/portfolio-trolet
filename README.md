@@ -36,7 +36,7 @@ The template is designed to be easily customizable through the `src/config.ts` f
 - **Skills**: List of technical skills
 - **Projects**: Project showcase with descriptions and links
 - **Experience**: Work history with bullet points
-- **Education**: Educational background and achievements
+- **Education**: Educational background, achievements, and logos
 
 If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely.
 
@@ -107,6 +107,7 @@ education: [
     school: "University Name",
     degree: "Bachelor of Science in Computer Science",
     dateRange: "2014 - 2018",
+    logo: "/logos/university.png",
     achievements: [
       "Graduated Magna Cum Laude with 3.8 GPA",
       "Dean's List all semesters",
@@ -125,7 +126,8 @@ The template uses [Tabler Icons](https://tabler.io/icons) for all icons. If you 
 ```
 devportfolio/
 ├── public/
-│   └── favicon.svg          # Site favicon
+│   ├── favicon.svg          # Site favicon
+│   └── logos/               # Education logos
 ├── src/
 │   ├── components/          # Astro components
 │   │   ├── About.astro      # About section
