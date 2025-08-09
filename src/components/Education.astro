@@ -77,64 +77,68 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         </div>
       </div>
       <script>
-        const CONFIG = {
-          proximity: 40,
-          spread: 80,
-          blur: 12,
-          gap: 32,
-          vertical: false,
-          opacity: 0,
-        };
 
-        const CONTAINERS = document.querySelectorAll('.glow-container');
-        const CARDS = document.querySelectorAll('.glow-card');
+        document.addEventListener('DOMContentLoaded', () => {
+          const CONFIG = {
+            proximity: 40,
+            spread: 80,
+            blur: 12,
+            gap: 32,
+            vertical: false,
+            opacity: 0,
+          };
 
-        const UPDATE = (event) => {
-          for (const CARD of CARDS) {
-            const BOUNDS = CARD.getBoundingClientRect();
+          const CONTAINERS = document.querySelectorAll('.glow-container');
+          const CARDS = document.querySelectorAll('.glow-card');
 
-            if (
-              event?.x > BOUNDS.left - CONFIG.proximity &&
-              event?.x < BOUNDS.left + BOUNDS.width + CONFIG.proximity &&
-              event?.y > BOUNDS.top - CONFIG.proximity &&
-              event?.y < BOUNDS.top + BOUNDS.height + CONFIG.proximity
-            ) {
-              CARD.style.setProperty('--active', 1);
-            } else {
-              CARD.style.setProperty('--active', CONFIG.opacity);
+          const UPDATE = (event) => {
+            for (const CARD of CARDS) {
+              const BOUNDS = CARD.getBoundingClientRect();
+
+              if (
+                event?.x > BOUNDS.left - CONFIG.proximity &&
+                event?.x < BOUNDS.left + BOUNDS.width + CONFIG.proximity &&
+                event?.y > BOUNDS.top - CONFIG.proximity &&
+                event?.y < BOUNDS.top + BOUNDS.height + CONFIG.proximity
+              ) {
+                CARD.style.setProperty('--active', 1);
+              } else {
+                CARD.style.setProperty('--active', CONFIG.opacity);
+              }
+
+              const CENTER = [
+                BOUNDS.left + BOUNDS.width * 0.5,
+                BOUNDS.top + BOUNDS.height * 0.5,
+              ];
+
+              let ANGLE =
+                (Math.atan2(event?.y - CENTER[1], event?.x - CENTER[0]) * 180) /
+                Math.PI;
+
+              ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
+
+              CARD.style.setProperty('--start', ANGLE + 90);
             }
+          };
 
-            const CENTER = [
-              BOUNDS.left + BOUNDS.width * 0.5,
-              BOUNDS.top + BOUNDS.height * 0.5,
-            ];
+          document.body.addEventListener('pointermove', UPDATE);
 
-            let ANGLE =
-              (Math.atan2(event?.y - CENTER[1], event?.x - CENTER[0]) * 180) /
-              Math.PI;
+          const RESTYLE = () => {
+            for (const CONTAINER of CONTAINERS) {
+              CONTAINER.style.setProperty('--gap', CONFIG.gap);
+              CONTAINER.style.setProperty('--blur', CONFIG.blur);
+              CONTAINER.style.setProperty('--spread', CONFIG.spread);
+              CONTAINER.style.setProperty(
+                '--direction',
+                CONFIG.vertical ? 'column' : 'row'
+              );
+            }
+          };
 
-            ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
+          RESTYLE();
+          UPDATE();
+        });
 
-            CARD.style.setProperty('--start', ANGLE + 90);
-          }
-        };
-
-        document.body.addEventListener('pointermove', UPDATE);
-
-        const RESTYLE = () => {
-          for (const CONTAINER of CONTAINERS) {
-            CONTAINER.style.setProperty('--gap', CONFIG.gap);
-            CONTAINER.style.setProperty('--blur', CONFIG.blur);
-            CONTAINER.style.setProperty('--spread', CONFIG.spread);
-            CONTAINER.style.setProperty(
-              '--direction',
-              CONFIG.vertical ? 'column' : 'row'
-            );
-          }
-        };
-
-        RESTYLE();
-        UPDATE();
       </script>
     </section>
   )
