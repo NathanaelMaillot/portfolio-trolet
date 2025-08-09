@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.1.0
+
+- Added optional institution logos to the education section
+
 ### 2.0.0
 
 - Complete rewrite of the template using Astro and Tailwind
