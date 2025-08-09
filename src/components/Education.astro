@@ -5,7 +5,11 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
 {
   hasEducation && (
-    <section id="education" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <section
+      id="education"
+      class="p-8 sm:p-12 md:p-16 lg:p-24"
+      style={`--accent-color: ${siteConfig.accentColor}; --accent-color-light: #3b82f6; --accent-color-dark: #1e40af;`}
+    >
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
@@ -20,50 +24,117 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
           <div class="lg:col-span-8">
             <div class="space-y-8">
-              {siteConfig.education.map((edu) => (
-                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
-                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                    <div class="flex items-center gap-4">
-                      {edu.logo && (
-                        <img
-                          src={edu.logo}
-                          alt={`${edu.school} logo`}
-                          class="w-12 h-12 object-contain flex-shrink-0"
-                        />
-                      )}
-                      <div>
-                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
-                          {edu.degree}
-                        </h3>
-                        <p
-                          class="text-base sm:text-lg"
-                          style={`color: ${siteConfig.accentColor}`}
-                        >
-                          {edu.school}
-                        </p>
+{siteConfig.education.map((edu) => (
+                <div class="glow-container">
+                  <article
+                    class="glow-card bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-all duration-300 relative cursor-pointer"
+                  >
+                    <div class="glows"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                      <div class="flex items-center gap-4">
+                        {edu.logo && (
+                          <img
+                            src={edu.logo}
+                            alt={`${edu.school} logo`}
+                            class="w-12 h-12 object-contain flex-shrink-0"
+                          />
+                        )}
+                        <div>
+                          <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                            {edu.degree}
+                          </h3>
+                          <p
+                            class="text-base sm:text-lg"
+                            style={`color: ${siteConfig.accentColor}`}
+                          >
+                            {edu.school}
+                          </p>
+                        </div>
                       </div>
+                      <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                        {edu.dateRange}
+                      </span>
                     </div>
-                    <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
-                      {edu.dateRange}
-                    </span>
-                  </div>
 
-                  <ul class="space-y-2">
-                    {edu.achievements.map((achievement) => (
-                      <li class="flex items-start">
-                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0" />
-                        <span class="text-sm sm:text-base text-gray-600">
-                          {achievement}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul class="space-y-2">
+                      {edu.achievements.map((achievement) => (
+                        <li class="flex items-start">
+                          <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mt-2 mr-3 flex-shrink-0" />
+                          <span class="text-sm sm:text-base text-gray-600">
+                            {achievement}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const CONFIG = {
+            proximity: 40,
+            spread: 80,
+            blur: 12,
+            gap: 32,
+            vertical: false,
+            opacity: 0,
+          };
+
+          const CONTAINERS = document.querySelectorAll('.glow-container');
+          const CARDS = document.querySelectorAll('.glow-card');
+
+          const UPDATE = (event) => {
+            for (const CARD of CARDS) {
+              const BOUNDS = CARD.getBoundingClientRect();
+
+              if (
+                event?.x > BOUNDS.left - CONFIG.proximity &&
+                event?.x < BOUNDS.left + BOUNDS.width + CONFIG.proximity &&
+                event?.y > BOUNDS.top - CONFIG.proximity &&
+                event?.y < BOUNDS.top + BOUNDS.height + CONFIG.proximity
+              ) {
+                CARD.style.setProperty('--active', 1);
+              } else {
+                CARD.style.setProperty('--active', CONFIG.opacity);
+              }
+
+              const CENTER = [
+                BOUNDS.left + BOUNDS.width * 0.5,
+                BOUNDS.top + BOUNDS.height * 0.5,
+              ];
+
+              let ANGLE =
+                (Math.atan2(event?.y - CENTER[1], event?.x - CENTER[0]) * 180) /
+                Math.PI;
+
+              ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
+
+              CARD.style.setProperty('--start', ANGLE + 90);
+            }
+          };
+
+          document.body.addEventListener('pointermove', UPDATE);
+
+          const RESTYLE = () => {
+            for (const CONTAINER of CONTAINERS) {
+              CONTAINER.style.setProperty('--gap', CONFIG.gap);
+              CONTAINER.style.setProperty('--blur', CONFIG.blur);
+              CONTAINER.style.setProperty('--spread', CONFIG.spread);
+              CONTAINER.style.setProperty(
+                '--direction',
+                CONFIG.vertical ? 'column' : 'row'
+              );
+            }
+          };
+
+          RESTYLE();
+          UPDATE();
+        });
+      </script>
     </section>
   )
 }
