@@ -108,6 +108,7 @@ export const siteConfig = {
       school: "Polytechnique Montréal",
       degree: "Bachelor of Engineering – Mechanical Engineering (Graduate)",
       dateRange: "2021 – 2025",
+      logo: "https://upload.wikimedia.org/wikipedia/fr/9/99/Logo_Polytechnique_Montr%C3%A9al.png",
       achievements: [
         "Recipient – Perseverance Scholarship (2023) – Family J.W. McConnell / Polytechnique Montréal",
         "Recipient – Stantec Diversity & Inclusion Scholarship (2024)",
