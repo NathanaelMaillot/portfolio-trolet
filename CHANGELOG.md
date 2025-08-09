@@ -3,6 +3,7 @@
 ### 2.1.0
 
 - Added optional institution logos to the education section
+- Updated Polytechnique Montréal logo to use a locally stored image
 
 ### 2.0.0
 
