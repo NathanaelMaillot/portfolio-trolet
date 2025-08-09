@@ -109,6 +109,7 @@ export const siteConfig = {
       degree: "Bachelor of Engineering – Mechanical Engineering (Graduate)",
       dateRange: "2021 – 2025",
       logo: "https://drive.google.com/uc?export=view&id=1LZvZvBNhFNipsTIO22A5rge21Uzlm6Wq",
+
       achievements: [
         "Recipient – Perseverance Scholarship (2023) – Family J.W. McConnell / Polytechnique Montréal",
         "Recipient – Stantec Diversity & Inclusion Scholarship (2024)",
