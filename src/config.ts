@@ -116,7 +116,7 @@ export const siteConfig = {
       school: "Lycée La Martinièree Monplaisir, Lyon, France",
       degree: "Classes Préparatoires aux Grandes Écoles",
       dateRange: "2018 – 2020",
-      logo: "/logos/lmm.png",
+      logo: "/portfolio-trolet/logos/lmm.png",
       achievements: [
       ],
     }
@@ -126,43 +126,43 @@ export const siteConfig = {
       year: 2024,
       title: "Stantec Equity & Diversity Scholarship",
       description: "Awarded by Stantec to recognize leadership and contributions promoting diversity and inclusion in engineering.",
-      awardedBy: "Stantec",
+      awardedBy: "Honored by Stantec",
     },
     {
       year: 2023,
       title: "Perseverance Scholarship",
       description: "Selected by the Polytechnique Montréal committee for exceptional determination and academic commitment.",
-      awardedBy: "Family J.W. McConnell – Polytechnique Montréal",
+      awardedBy: "Honored by Family J.W. McConnell – Polytechnique Montréal",
     },
     {
       year: 2024,
       title: "Force Avenir – Innovation Competition",
       description: "Selected for innovative design of the automated shoe cleaning machine for second hand industry.",
-      awardedBy: "Polytechnique Montréal",
+      awardedBy: "Honored y Polytechnique Montréal",
     },
     {
       year: 2023,
       title: "Force Avenir – Innovation Competition",
       description: "Selected for innovative design of the automated shoe cleaning machine for commercial use.",
-      awardedBy: "Polytechnique Montréal",
+      awardedBy: "Honored Polytechnique Montréal",
     },
     {
       year: 2022,
       title: "RoboMaster North America division – 3rd Place",
       description: "Achieved 3rd place for performance as part of Polystar technical society. International robotics competition where teams design, build, and operate robots for high-speed, strategy-based matches.",
-      awardedBy: "DJI RoboMaster Competition",
+      awardedBy: "Honored DJI RoboMaster Competition",
     },
     {
       year: 2018,
       title: "Olympiades des Sciences de l'Ingénieur – National",
       description: "Top 10 teams in France and recipient of the 'Prix de l’innovation collaborative' for an automated cardiac massage device.",
-      awardedBy: "Fondation Georges Besse",
+      awardedBy: "Honored by Fondation Georges Besse",
     },
     {
       year: 2017,
       title: "Olympiades des Sciences de l'Ingénieur – Regional",
       description: "2nd place in Réunion Island for an automated cardiac massage device, qualifying for the national competition.",
-      awardedBy: "Académie de La Réunion",
+      awardedBy: "Honored by Académie de La Réunion",
     }
   ]
 };
