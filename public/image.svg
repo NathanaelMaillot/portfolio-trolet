@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180mm"
+   height="180mm"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="false" /><defs
+     id="defs1" /><g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-14.999999,-59.999998)"><circle
+       style="fill:#000000;fill-opacity:1;stroke:#fe0000;stroke-width:1.06737;stroke-opacity:0"
+       id="path1"
+       cx="105"
+       cy="150"
+       r="89.466316"
+       sodipodi:insensitive="true" /></g><g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="calque 2"
+     style="display:inline"
+     transform="translate(-14.999999,-59.999998)"><path
+       style="display:inline;fill:#0086f6;fill-opacity:1;stroke:#fe0000;stroke-width:0.291042;stroke-opacity:0"
+       d="m 93.559571,158.19754 0.01529,-46.27294 15.193949,-0.0355 19.92007,29.03605 19.57407,-29.0101 14.29513,0.0233 0.11923,73.53288 -14.51415,-0.16155 -0.21275,-47.6068 -19.43273,28.41768 -20.04401,-28.85572 -0.0639,44.5683 z"
+       id="path3"
+       sodipodi:nodetypes="ccccccccccccc"
+       sodipodi:insensitive="true" /><path
+       style="fill:#ffffff;fill-opacity:1;stroke:#fe0000;stroke-width:0.291042;stroke-opacity:0"
+       d="m 47.788448,185.41875 -0.03816,-73.46945 16.823924,0.0333 43.833218,69.8489 0.0354,3.66708 -13.945852,0.0164 -31.327804,-49.69146 -0.280255,49.56395 z"
+       id="path2"
+       sodipodi:nodetypes="ccccccccc"
+       sodipodi:insensitive="true" /></g></svg>
