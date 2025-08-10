@@ -105,19 +105,22 @@ export const siteConfig = {
   ],
   education: [
     {
-      school: "Polytechnique Montréal",
-      degree: "Bachelor of Engineering – Mechanical Engineering (Graduate)",
+      school: "Polytechnique Montreal, Montreal, QC, Canada ",
+      degree: "Bachelor of Engineering – Mechanical Engineering",
       dateRange: "2021 – 2025",
       logo: "/logos/polytechnique-montreal.svg",
       achievements: [
-        "Recipient – Perseverance Scholarship (2023) – Family J.W. McConnell / Polytechnique Montréal",
-        "Recipient – Stantec Diversity & Inclusion Scholarship (2024)",
-        "Selected for 'Force Avenir' innovation competition (2023 & 2024)",
-        "RoboMaster North America – 3rd Place (2022)",
-        "Olympiades des Sciences de l’ingénieur, La Réunion – 2nd place (2017, Regional)",
-        "Olympiades des Sciences de l’ingénieur, France – Top 10 teams & 'Prix de l’innovation collaborative' (2018)"
       ],
     }
+{
+      school: "Lycée La Martinièree Monplaisir, Lyon, France",
+      degree: "Classes Préparatoires aux Grandes Écoles",
+      dateRange: "2018 – 2020",
+      logo: "/logos/lmm.png",
+      achievements: [
+      ],
+    }
+    
   ],
   awardsAndCompetitions: [
     {
