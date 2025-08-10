@@ -111,8 +111,8 @@ export const siteConfig = {
       logo: "/logos/polytechnique-montreal.svg",
       achievements: [
       ],
-    }
-{
+    },
+    {
       school: "Lycée La Martinièree Monplaisir, Lyon, France",
       degree: "Classes Préparatoires aux Grandes Écoles",
       dateRange: "2018 – 2020",
@@ -120,7 +120,6 @@ export const siteConfig = {
       achievements: [
       ],
     }
-    
   ],
   awardsAndCompetitions: [
     {
