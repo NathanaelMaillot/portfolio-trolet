@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Nathanael Maillot",
-  title: "CTO | Technical Systems Designer & Innovation Lead",
+  title: "Director of Technology & Innovation — Engineering Strategy & Industrial Automation",
   description: "Portfolio of Nathanael Maillot – Designer, builder, and strategic leader driving technical innovation, automation, and sustainable operations at Trolet.",
   accentColor: "#1d4ed8",
   social: {
@@ -8,8 +8,7 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/nathanaelmaillot30/",
     github: "https://github.com/NathanaelMaillot",
   },
-  aboutMe:
-    "Graduate in Mechanical Engineering from Polytechnique Montréal, I lead technology strategy and innovation at Trolet, where I design and implement systems that transform second-hand footwear operations. My work spans hands-on mechanical design, automation engineering, RFID integration, and process optimization. I have personally developed custom machines, automated workflows, and operational infrastructures, while also managing cross-disciplinary projects in AI, chemistry, and R&D.",
+  aboutMe: "Director of Technology & Innovation at Trolet, a Montréal-based startup industrializing the circular economy for second-hand footwear. At the intersection of engineering, automation and strategy, I design the systems, machines and teams that turn circularity into industrial reality. With a background in mechanical engineering and mechatronics from Polytechnique Montréal, I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds — from mechatronic design and process automation to data-driven operations and scaling strategy. I built Trolet’s first-generation prototypes (automated shoe cleaning and disinfection systems, RFID-based smart inventory, automated photo rigs) and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems. Beyond machines, my goal is to build processes and culture that make innovation sustainable; when technology aligns with people and purpose, it becomes an engine of impact. This is what drives me: designing the future of sustainable industry, one smart system at a time.",
   skills: [
     {
       category: "Mechanical",
@@ -42,18 +41,18 @@ export const siteConfig = {
   ],
   projects: [
     {
-      name: "Automated Shoe Cleaning Machine",
+      name: "Automated Shoe Cleaning System",
       description:
-        "Designed and built a custom cleaning machine for individual shoe pairs, integrating mechanical brushing, water control, and drying systems. Developed from concept to functional prototype, tested for durability and cleaning efficiency.",
+        "Designed and built Trolet’s first automated shoe-cleaning system, proving that a process once manual and artisanal could be engineered, automated, and elegant. A compact, 3D-printer-inspired prototype that cleans, disinfects, deodorizes, and dries a pair of shoes in under five minutes, with no human intervention. Led the entire design — from mechanics and electronics to software control — establishing the foundation of Trolet’s automation roadmap.",
       link: "https://trolet.ca",
-      skills: ["Mechanical Design", "Prototyping", "Testing", "Automation"],
+      skills: ["Mechanical Design", "Automation", "Full-Cycle Prototyping", "System Integration", "Product Innovation"],
     },
     {
       name: "Disinfection Chamber",
       description:
-        "Built a UV-based disinfection box to sanitize shoes post-cleaning. Managed testing to ensure compliance with hygiene standards and optimized cycle time for workshop integration.",
+        "Designed Trolet’s first automated disinfection chamber combining ozone and UV light to sterilize up to twenty pairs of shoes per cycle without chemicals or manual intervention. Achieved ~90% disinfection efficiency and 80% reduction in human handling, proving that sustainable operations and industrial hygiene can coexist. Led the full system design and testing, setting a new standard for eco-responsible automation in footwear revalorization.",
       link: "#",
-      skills: ["Mechanical Fabrication", "UV Technology Integration", "Process Safety"],
+      skills: ["Process Innovation", "Sustainable Design", "Automation & Control"],
     },
     {
       name: "Automated Photography System",
