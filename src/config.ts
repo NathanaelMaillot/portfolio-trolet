@@ -44,7 +44,7 @@ export const siteConfig = {
       name: "Automated Shoe Cleaning System",
       description:
         "Designed and built Trolet’s first automated shoe-cleaning system, proving that a process once manual and artisanal could be engineered, automated, and elegant. A compact, 3D-printer-inspired prototype that cleans, disinfects, deodorizes, and dries a pair of shoes in under five minutes, with no human intervention. Led the entire design — from mechanics and electronics to software control — establishing the foundation of Trolet’s automation roadmap.",
-      link: "https://trolet.ca",
+      link: "#",
       skills: ["Mechanical Design", "Automation", "Full-Cycle Prototyping", "System Integration", "Product Innovation"],
     },
     {
@@ -71,9 +71,9 @@ export const siteConfig = {
     {
       name: "RFID Inventory Implementation",
       description:
-        "Led the introduction of RFID technology for real-time inventory tracking, including system design, equipment procurement, and operational training.",
+        "Designed and led TroStock, Trolet’s platform that connects RFID-based identification, live inventory, and data analytics to manage footwear revalorization end-to-end. Each pair receives a unique SKU updated in real time at every stage, enabling full traceability and smarter decision-making. Now the data-driven backbone powering Trolet’s circular operations.",
       link: "#",
-      skills: ["RFID Integration", "Operations Planning", "Systems Testing"],
+      skills: ["RFID Integration", "Operational Intelligence", "Cloud & Frontend Sync", "System Architecture"],
     },
   ],
   experience: [
