@@ -43,7 +43,7 @@ export const siteConfig = {
     {
       name: "Automated Shoe Cleaning System",
       description:
-        "Designed and built a fully automated shoe cleaning prototype capable of cleaning, disinfecting, deodorizing, and drying footwear in under five minutes. A mechatronic system inspired by 3D printer kinematics, developed to demonstrate the industrial potential of automated revalorization.",
+        "Designed and built a fully automated shoe cleaning prototype capable of cleaning, disinfecting, deodorizing, and drying footwear in under five minutes. A mechatronic system inspired by 3D printer kinematics developed to demonstrate the industrial potential of automated revalorization.",
       link: "#",
       skills: ["Mechanical Design", "Automation", "Full-Cycle Prototyping", "System Integration", "Product Innovation"],
     },
@@ -79,26 +79,57 @@ export const siteConfig = {
   experience: [
     {
       company: "Trolet",
-      title: "Chief Technical Officer",
-      dateRange: "Aug 2024 – Present",
+      title: "Director of Technology & Innovation",
+      dateRange: "Aug 2023 – Present",
       bullets: [
         "Defined and executed Trolet’s technology strategy, aligning R&D, automation, and sustainability goals.",
-        "Personally developed key workshop systems: shoe cleaning machine, disinfection chamber, test bins, automated photography setup, bulk listing tools, and full inventory management process.",
-        "Led R&D projects in cleaning chemistry to optimize process efficiency and safety.",
-        "Oversaw AI development for automated shoe grading and sorting, ensuring integration with operational workflows.",
-        "Introduced RFID technology for seamless inventory tracking across all sales channels.",
-        "Selected twice (2023 & 2024) at Polytechnique for the 'Force Avenir' innovation competition for the automated shoe cleaning machine."
+        "Designed and built the first generation of automation systems: shoe cleaning machine, disinfection chamber, test bins, automated photography setup, bulk listing tools, and full inventory management process.",
+        "Led R&D programs on automation, AI, cleaning chemistry, and fit standardization to optimize process efficiency and safety.",
+        "Optimized operational efficiency through data-driven process design and workflow automation.",
+        "Built and managed cross-disciplinary teams across software, AI, mechanical, chemical and electrical engineering.",
+        "Awarded the Fashion & Apparel Innovation Prize — Montréal Fashion Week (Vestechpro).",
+      ],
+    },
+    {
+      company: "Hypertronic Technologies",
+      title: "Mechanical Engineering Intern",
+      dateRange: "May – August 2023",
+      bullets: [
+        "Designed mechanical structures and enclosures for industrial and energy applications using Autodesk Inventor.",
+        "Performed static and thermal FEA simulations with Inventor Nastran for structural validation.",
+        "Developed modular design concepts for a scalable battery pack system adaptable to different industrial uses.",
+        "Integrated electronic components and optimized internal layouts for compact, cost-effective, manufacturable designs.",
+        "Collaborated with project managers and clients, contributing to design reviews and technical recommendations.",
       ],
     },
     {
       company: "Polytechnique Montréal",
-      title: "Engineering Student – Project Lead",
+      title: "Multiple Innovation Hubs — Montréal, Canada",
       dateRange: "2021 – 2025",
       bullets: [
-        "Directed a capstone project on bio-based composite materials, overseeing mechanical testing and process optimization.",
-        "Coordinated resources, schedules, and deliverables for a multidisciplinary engineering team.",
-        "Recipient of the 2023 Perseverance Scholarship from the Family J.W. McConnell via Polytechnique Montréal and the 2024 Stantec Diversity & Inclusion Scholarship.",
-        "Third place winner at RoboMaster North America 2022 as part of the Polystar technical society."
+      "Completed four integrative engineering projects covering robotics, automation, and sustainable material design.",
+      "Led a 5-person team to design and prototype an automatic clothes-folding machine (Project 1).",
+      "Developed a teleoperated robot with embedded electronics and control programming (Project 2).",
+      "Designed adaptive shoe-holding and hydraulic cleaning subsystems for Trolet’s first automated cleaning prototype (Project 3).",
+      "Performed testing and data analysis on eco-materials from recycled construction waste (Project 4).",
+      "Mechanical designer for Polystar technical society in RoboMaster robotics competition (3rd place, North America 2022).",
+      "Received SolidExperts Certification in Advanced Assembly Modeling (SolidWorks).",
+      "Awarded Stantec Equity & Diversity Scholarship (2024) and McConnell Perseverance Award (2023).",
+      "Recipient of Mitacs Research Grant for industrial cleaning automation and twice nominated for Force Avenir Innovation Award (2023, 2024)."
+      ],
+    },
+    {
+      company: "Various Employers (France & Canada)",
+      title: "Early Technical Experience — Industry, Maintenance & Service Foundations",
+      dateRange: "2018 – 2024,
+      bullets: [
+    "Sales associate at Home Depot Montréal (2024) — advised customers on plumbing and electrical projects. Earned two badges of excellence for customer service and conscientious work ethic.",
+    "Maintenance mechanic at Bimbo Canada (2022–2023) — performed preventive maintenance, mechanical repairs, and diagnostics on production lines. Operated tools and supervised contractors during machine installations.",
+    "Production worker at Kruger Packaging (2021) — optimized palletizing and monitored machine performance in a high-speed packaging line. Praised as 'the best student they had ever had'.",
+    "Housekeeping associate at Sheraton Montréal (2021–2022) — maintained operational standards of cleanliness, efficiency, and teamwork in a high-demand hospitality environment.",
+    "Agro-food operator at Salaison de Bourbon (2020) — handled food processing, packaging, and quality control; Developed precision and endurance in fast-paced industrial settings.",
+    "Construction worker (2018) — assisted a professional mason in demolition, tiling, cutting, and finishing; Built early proficiency with hand and power tools.",
+    "Recognized consistently for diligence, initiative, and reliability across all roles by supervisors and clients alike."
       ],
     },
   ],
