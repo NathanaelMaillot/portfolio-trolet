@@ -115,7 +115,7 @@ export const siteConfig = {
       "Mechanical designer for Polystar technical society in RoboMaster robotics competition (3rd place, North America 2022).",
       "Received SolidExperts Certification in Advanced Assembly Modeling (SolidWorks).",
       "Awarded Stantec Equity & Diversity Scholarship (2024) and McConnell Perseverance Award (2023).",
-      "Recipient of Mitacs Research Grant for industrial cleaning automation and twice nominated for Force Avenir Innovation Award (2023, 2024)."
+      "Recipient of Mitacs Research Grant for industrial cleaning automation and twice nominated for Force Avenir Innovation Award (2023, 2024).",
       ],
     },
     {
@@ -129,7 +129,7 @@ export const siteConfig = {
     "Housekeeping associate at Sheraton Montréal (2021–2022) — maintained operational standards of cleanliness, efficiency, and teamwork in a high-demand hospitality environment.",
     "Agro-food operator at Salaison de Bourbon (2020) — handled food processing, packaging, and quality control; Developed precision and endurance in fast-paced industrial settings.",
     "Construction worker (2018) — assisted a professional mason in demolition, tiling, cutting, and finishing; Built early proficiency with hand and power tools.",
-    "Recognized consistently for diligence, initiative, and reliability across all roles by supervisors and clients alike."
+    "Recognized consistently for diligence, initiative, and reliability across all roles by supervisors and clients alike.",
       ],
     },
   ],
