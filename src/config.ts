@@ -8,7 +8,7 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/nathanaelmaillot30/",
     github: "https://github.com/NathanaelMaillot",
   },
-  aboutMe: "Director of Technology & Innovation at Trolet, a Montréal-based startup industrializing the circular economy for second-hand footwear.\\nAt the intersection of engineering, automation and strategy, I design the systems, machines and teams that turn circularity into industrial reality. With a background in mechanical engineering and mechatronics from Polytechnique Montréal, I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds from mechatronic design and process automation to data-driven operations and scaling strategy.<br>I built Trolet’s first-generation prototypes (automated shoe cleaning and disinfection systems, RFID-based smart inventory, automated photo rigs) and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems.<br>Beyond machines, my goal is to build processes and culture that make innovation sustainable.",
+  aboutMe: "Director of Technology & Innovation at Trolet, a Montréal-based startup industrializing the circular economy for second-hand footwear. At the intersection of engineering, automation and strategy, I design the systems, machines and teams that turn circularity into industrial reality. With a background in mechanical engineering and mechatronics from Polytechnique Montréal, I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds from mechatronic design and process automation to data-driven operations and scaling strategy. I built Trolet’s first-generation prototypes (automated shoe cleaning and disinfection systems, RFID-based smart inventory, automated photo rigs) and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems.",
   skills: [
     {
       category: "Mechanical",
@@ -43,37 +43,37 @@ export const siteConfig = {
     {
       name: "Automated Shoe Cleaning System",
       description:
-        "Designed and built Trolet’s first automated shoe-cleaning system, proving that a process once manual and artisanal could be engineered, automated, and elegant. A compact, 3D-printer-inspired prototype that cleans, disinfects, deodorizes, and dries a pair of shoes in under five minutes, with no human intervention. Led the entire design — from mechanics and electronics to software control — establishing the foundation of Trolet’s automation roadmap.",
+        "Designed and built a fully automated shoe cleaning prototype capable of cleaning, disinfecting, deodorizing, and drying footwear in under five minutes. A mechatronic system inspired by 3D printer kinematics, developed to demonstrate the industrial potential of automated revalorization.",
       link: "#",
       skills: ["Mechanical Design", "Automation", "Full-Cycle Prototyping", "System Integration", "Product Innovation"],
     },
     {
-      name: "Disinfection Chamber",
+      name: "Ozone & UV Disinfection Chamber",
       description:
-        "Designed Trolet’s first automated disinfection chamber combining ozone and UV light to sterilize up to twenty pairs of shoes per cycle without chemicals or manual intervention. Achieved ~90% disinfection efficiency and 80% reduction in human handling, proving that sustainable operations and industrial hygiene can coexist. Led the full system design and testing, setting a new standard for eco-responsible automation in footwear revalorization.",
+        "Developed an ozone and UV-based automated disinfection system ensuring 90% sterilization efficiency and reducing human intervention by 80%. Designed for ecological, chemical-free footwear sanitation at scale.",
       link: "#",
-      skills: ["Process Innovation", "Sustainable Design", "Automation & Control"],
+      skills: ["Process Innovation", "Sustainable Design", "Automation & Control", "Ozone & UV Sterilization" ],
     },
     {
-      name: "Automated Photography System",
+      name: "Automated Photography & Intelligent Product Classification System",
       description:
-        "Designed an automated photo capture setup for consistent, high-quality product images. Integrated camera positioning, lighting control, and software workflows to streamline product listing.",
+        "Designed and built Trolet’s Automated Photography & AI Classification System, linking image capture, dynamic database updates, and AI-based attribute recognition. What began as photo automation evolved into a full visual-to-data pipeline, reducing manual input and scaling operations intelligently.",
       link: "#",
-      skills: ["Automation", "Workflow Integration", "E-commerce Optimization"],
+      skills: ["Workflow Integration", "Industrial Photography Workflow", "Data Architecture", "Python & APIs", "Computer Vision & AI"],
     },
     {
-      name: "Bulk Product Listing System",
+      name: "Footwear Fit Standardization",
       description:
-        "Developed a process and tooling to simplify bulk product uploads to sales platforms, reducing listing time by over 70%.",
+        "Leading an R&D initiative on footwear fit standardization to bridge the gap between shoe sizing and real comfort. Combining data, mechanical analysis, and digital modeling, the project aims to make sizing reliable and returns nearly obsolete.",
       link: "#",
-      skills: ["Process Design", "Data Management", "E-commerce Systems"],
+      skills: ["Innovation Strategy", "Human-Centered Design", "Mechanical Analysis", "Data Modeling", "R&D Leadership"],
     },
     {
-      name: "RFID Inventory Implementation",
+      name: "TroStock — Smart Inventory & Operations Platform",
       description:
         "Designed and led TroStock, Trolet’s platform that connects RFID-based identification, live inventory, and data analytics to manage footwear revalorization end-to-end. Each pair receives a unique SKU updated in real time at every stage, enabling full traceability and smarter decision-making. Now the data-driven backbone powering Trolet’s circular operations.",
       link: "#",
-      skills: ["RFID Integration", "Operational Intelligence", "Cloud & Frontend Sync", "System Architecture"],
+      skills: ["RFID Integration", "Operational Intelligence", "Cloud & Frontend Sync", "System Architecture", "Data-Driven Operations"],
     },
   ],
   experience: [
