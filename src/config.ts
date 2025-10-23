@@ -11,8 +11,7 @@ export const siteConfig = {
   aboutMe: `Director of Technology & Innovation at Trolet, a Montréal-based startup industrializing the circular economy for second-hand footwear. 
   At the intersection of engineering, automation and strategy, I design the systems, machines and teams that turn circularity into industrial reality. With a background in mechanical engineering and mechatronics from Polytechnique Montréal, I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds from mechatronic design and process automation to data-driven operations and scaling strategy.
   I built Trolet’s first-generation prototypes (automated shoe cleaning and disinfection systems, RFID-based smart inventory, automated photo rigs) and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems.
-  Beyond machines, my goal is to build processes and culture that make innovation sustainable.",
-`
+  Beyond machines, my goal is to build processes and culture that make innovation sustainable.`,
   skills: [
     {
       category: "Mechanical",
