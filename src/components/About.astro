@@ -2,53 +2,26 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
-  <div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-4">
-        <h2
-          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
-        >
+<section
+  id="about"
+  class="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50"
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="grid gap-10 lg:gap-16 lg:grid-cols-3 items-start">
+      <div class="lg:col-span-1 space-y-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
           About Me
         </h2>
         <div
-          class="w-[75px] h-[5px] mt-2 rounded-full"
+          class="w-[75px] h-[5px] rounded-full"
           style={`background-color: ${siteConfig.accentColor}`}
-        >
-        </div>
+        ></div>
       </div>
 
-      <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+      <div class="lg:col-span-2">
+        <p class="text-lg sm:text-xl leading-relaxed text-gray-600">
           {siteConfig.aboutMe}
         </p>
-
-        <div class="pt-4 space-y-8">
-          {
-            siteConfig.skills.map(({ category, items, color }) => {
-              const id = category.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-              return (
-                <section class="space-y-3" aria-labelledby={id}>
-                  <h3
-                    id={id}
-                    class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900"
-                  >
-                    {category}
-                  </h3>
-                  <div class="flex flex-wrap gap-3 md:gap-4">
-                    {items.map((skill) => (
-                      <span
-                        class={`px-4 py-2 rounded-full text-sm sm:text-base md:text-lg font-medium ${color} hover:opacity-80 transition-colors duration-200`}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </section>
-              );
-            })
-          }
-        </div>
       </div>
     </div>
   </div>
