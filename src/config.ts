@@ -121,7 +121,7 @@ export const siteConfig = {
     {
       company: "Various Employers (France & Canada)",
       title: "Early Technical Experience — Industry, Maintenance & Service Foundations",
-      dateRange: "2018 – 2024,
+      dateRange: "2018 – 2024",
       bullets: [
     "Sales associate at Home Depot Montréal (2024) — advised customers on plumbing and electrical projects. Earned two badges of excellence for customer service and conscientious work ethic.",
     "Maintenance mechanic at Bimbo Canada (2022–2023) — performed preventive maintenance, mechanical repairs, and diagnostics on production lines. Operated tools and supervised contractors during machine installations.",
