@@ -139,11 +139,12 @@ export const siteConfig = {
       "Participated in leading Canadian startup incubators to accelerate Trolet’s technological and business development, combining engineering, strategy, and sustainability.",
     programs: [
       {
+        company: "Technology acceleration and business model validation",
         name: "Centech (ÉTS)",
         location: "Montréal, Canada",
         focus: "Technology acceleration and business model validation",
         description:
-          "Selected for the Centech Acceleration Program — one of Canada’s top startup incubators and ranked among the world’s top 10. Focused on testing market potential for Trolet’s first technological product, refining business and financial models, and receiving mentorship from successful tech entrepreneurs.",
+          "Selected for the Centech Acceleration Program, one of Canada’s top startup incubators and ranked among the world’s top 10. Focused on testing market potential for Trolet’s first technological product, refining business and financial models, and receiving mentorship from successful tech entrepreneurs.",
       },
       {
         name: "District 3 (Concordia University)",
@@ -167,19 +168,12 @@ export const siteConfig = {
           "Participated in Esplanade’s impact incubator program, focusing on sustainability, circular economy, and social innovation. Benefited from mentorship, funding strategies, and access to the Québec sustainability network.",
       },
       {
-        name: "Propolis (Polytechnique Montréal)",
+        name: "Propolys (Polytechnique Montréal)",
         location: "Montréal, Canada",
         focus: "University technology transfer and applied R&D entrepreneurship",
         description:
           "Received tailored support for understanding and optimizing Trolet’s core technology while developing professional connections across Polytechnique’s engineering and research ecosystem.",
       },
-    ],
-    skills: [
-      "Entrepreneurship",
-      "Business Strategy",
-      "Technology Commercialization",
-      "Sustainable Innovation",
-      "Startup Leadership",
     ],
   },
   education: [
