@@ -133,8 +133,9 @@ export const siteConfig = {
       ],
     },
   ],
-  entrepreneurship: [
+  entrepreneurship: {
     title: "Entrepreneurial & Innovation Programs",
+    programs: [
       {
         name: "Centech (ÉTS)",
         location: "Montréal, Canada",
@@ -169,8 +170,9 @@ export const siteConfig = {
         focus: "University technology transfer and applied R&D entrepreneurship",
         description:
           "Received tailored support for understanding and optimizing Trolet’s core technology while developing professional connections across Polytechnique’s engineering and research ecosystem.",
-      },
-    ],
+      }
+    ]
+  },
   education: [
     {
       school: "Polytechnique Montreal, Montreal, QC, Canada ",
