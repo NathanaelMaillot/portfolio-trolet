@@ -11,31 +11,50 @@ export const siteConfig = {
   aboutMe: "Director of Technology & Innovation at Trolet, a Montréal-based startup industrializing the circular economy for second-hand footwear. At the intersection of engineering, automation and strategy, I design the systems, machines and teams that turn circularity into industrial reality. With a background in mechanical engineering and mechatronics from Polytechnique Montréal, I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds from mechatronic design and process automation to data-driven operations and scaling strategy. I built Trolet’s first-generation prototypes (automated shoe cleaning and disinfection systems, RFID-based smart inventory, automated photo rigs) and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems.",
   skills: [
     {
-      category: "Mechanical",
-      color: "bg-red-100 text-red-800",
+      category: "Engineering & Automation",
+      color: "bg-emerald-100 text-emerald-800",
       items: [
-        "Mechanical Design & Fabrication",
-        "Prototyping & Testing"
-      ]
-    },
-    {
-      category: "Systems & Automation",
-      color: "bg-green-100 text-green-800",
-      items: [
-        "Automation Engineering",
-        "RFID Systems Integration",
-        "User Interface Planning",
+        "Mechatronic Design (SolidWorks, Inventor)",
+        "Mechanical Fabrication & DFM/DFA",
+        "Rapid Prototyping & Testing",
+        "Automation Engineering (motion, sensors)",
+        "RFID Identification & Traceability",
         "Industrial Workflow Design"
       ]
     },
     {
-      category: "Ops & Strategy",
+      category: "Software & Data",
+      color: "bg-indigo-100 text-indigo-800",
+      items: [
+        "Python Automation & APIs",
+        "Computer Vision & ML (attribute extraction)",
+        "Data Pipelines & NoSQL Modeling",
+        "Cloud & Hosting (Vercel, GCP)",
+        "Frontend Basics (React for ops tools)",
+        "Image-to-Data Integration"
+      ]
+    },
+    {
+      category: "Operations & Strategy",
       color: "bg-blue-100 text-blue-800",
       items: [
-        "Technology Strategy",
-        "R&D Coordination",
-        "Process Optimization",
-        "Team & Project Leadership"
+        "Technology Strategy & Roadmapping",
+        "R&D Leadership & Experimentation",
+        "Process Optimization (Lean mindset)",
+        "Cross-Disciplinary Team Management",
+        "Supplier & Vendor Coordination",
+        "Safety, Compliance & QA Thinking"
+      ]
+    },
+    {
+      category: "Tooling & Certifications",
+      color: "bg-amber-100 text-amber-800",
+      items: [
+        "SolidWorks (Advanced Assembly Modeling – SolidExperts)",
+        "Autodesk Inventor + Nastran (FEA static/thermal)",
+        "Arduino/C++ (control systems)",
+        "Git & CI basics for internal tools",
+        "Measurement & Test (mechanical, materials)"
       ]
     }
   ],
