@@ -139,6 +139,7 @@ export const siteConfig = {
       "Participated in leading Canadian startup incubators to accelerate Trolet’s technological and business development, combining engineering, strategy, and sustainability.",
     programs: [
       {
+        company: "Technology acceleration and business model validation",
         name: "Centech (ÉTS)",
         location: "Montréal, Canada",
         focus: "Technology acceleration and business model validation",
