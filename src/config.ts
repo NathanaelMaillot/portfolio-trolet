@@ -175,21 +175,43 @@ export const siteConfig = {
   },
   education: [
     {
-      school: "Polytechnique Montreal, Montreal, QC, Canada ",
-      degree: "Bachelor of Engineering – Mechanical Engineering",
+      school: "Polytechnique Montréal",
+      location: "Montréal, Canada",
+      degree: "Bachelor of Engineering – Mechanical Engineering (Mechatronics Orientation)",
       dateRange: "2021 – 2025",
       logo: "/logos/polytechnique-montreal.svg",
       achievements: [
+        "Specialization in mechanical design, automation, and industrial systems with a focus on sustainable technology.",
+        "Led multiple applied R&D projects in robotics, automation, and material science.",
+        "Recipient of the Stantec Equity & Diversity Scholarship (2024) and McConnell Perseverance Award (2023).",
+        "Recipient of a Mitacs Research Grant for industrial cleaning automation and twice nominated for the Force Avenir Innovation Award (2023 & 2024).",
+        "Certified in Advanced Assembly Modeling (SolidWorks) by SolidExperts (2022).",
+        "Active member and mechanical designer at Polystar technical society — 3rd place at RoboMaster North America 2022."
       ],
     },
     {
-      school: "Lycée La Martinièree Monplaisir, Lyon, France",
-      degree: "Classes Préparatoires aux Grandes Écoles",
+      school: "Lycée La Martinièree Monplaisir",
+      location: "Lyon, France",
+      degree: "Classes Préparatoires aux Grandes Écoles (CPGE) – Mathematics, Physics & Engineering Sciences",
       dateRange: "2018 – 2020",
       logo: "/portfolio-trolet/logos/lmm.png",
       achievements: [
+        "Completed two-year intensive preparatory program in advanced mathematics, physics, and engineering sciences.",
+        "Conducted a TIPE (Personal Engineering Research Project) on propeller cavitation reduction using CFD simulation in SolidWorks Flow Simulation."
       ],
-    }
+    },
+    {
+    school: "Lycée Roland-Garros",
+    location: "Le Tampon, Réunion Island, France",
+    degree: "French Baccalauréat – Science Track (Mathematics & Engineering Sciences)",
+    dateRange: "2015 – 2018",
+    logo: "/logos/lycee-roland-garros.png",
+    achievements: [
+      "Graduated with honors (Mention Bien).",
+      "Finalist in the National Engineering Sciences Olympiad (Paris, 2018) — awarded the ‘Prix de l’Innovation Collaborative’ by the Fondation Georges Besse.",
+      "2nd place in the Regional Engineering Sciences Olympiad (Réunion Island, 2018)."
+    ]
+  }
   ],
   awardsAndCompetitions: [
     {
