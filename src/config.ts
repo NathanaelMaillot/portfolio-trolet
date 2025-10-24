@@ -194,7 +194,7 @@ export const siteConfig = {
       location: "Lyon, France",
       degree: "Classes Préparatoires aux Grandes Écoles (CPGE) – Mathematics, Physics & Engineering Sciences",
       dateRange: "2018 – 2020",
-      logo: "/portfolio-trolet/logos/lmm.png",
+      logo: "/logos/lmm.png",
       achievements: [
         "Completed two-year intensive preparatory program in advanced mathematics, physics, and engineering sciences.",
         "Conducted a TIPE (Personal Engineering Research Project) on propeller cavitation reduction using CFD simulation in SolidWorks Flow Simulation."
