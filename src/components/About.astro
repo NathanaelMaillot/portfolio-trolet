@@ -1,54 +1,96 @@
 ---
 import { siteConfig } from "../config";
+import { Cpu as CpuIcon, Code2 as Code2Icon, TrendingUp as TrendingUpIcon, BadgeCheck as BadgeCheckIcon } from "lucide-astro";
+
+const iconComponents = {
+  cpu: CpuIcon,
+  "code-2": Code2Icon,
+  "trending-up": TrendingUpIcon,
+  "badge-check": BadgeCheckIcon,
+};
 ---
 
-<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
-  <div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-      <div class="lg:col-span-4">
-        <h2
-          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
-        >
+<section
+  id="about"
+  class="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50"
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="grid gap-10 lg:gap-16 lg:grid-cols-3 items-start">
+      <div class="lg:col-span-1 space-y-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
           About Me
         </h2>
         <div
-          class="w-[75px] h-[5px] mt-2 rounded-full"
+          class="w-[75px] h-[5px] rounded-full"
           style={`background-color: ${siteConfig.accentColor}`}
-        >
-        </div>
+        ></div>
       </div>
 
-      <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+      <div class="lg:col-span-2">
+        <p class="text-lg sm:text-xl leading-relaxed text-gray-600">
           {siteConfig.aboutMe}
         </p>
+      </div>
+    </div>
 
-        <div class="pt-4 space-y-8">
-          {
-            siteConfig.skills.map(({ category, items, color }) => {
-              const id = category.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-              return (
-                <section class="space-y-3" aria-labelledby={id}>
-                  <h3
-                    id={id}
-                    class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900"
-                  >
-                    {category}
-                  </h3>
-                  <div class="flex flex-wrap gap-3 md:gap-4">
-                    {items.map((skill) => (
-                      <span
-                        class={`px-4 py-2 rounded-full text-sm sm:text-base md:text-lg font-medium ${color} hover:opacity-80 transition-colors duration-200`}
-                      >
-                        {skill}
-                      </span>
-                    ))}
+    <div class="mt-16 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)] items-start">
+      <div class="space-y-4">
+        <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+          Core Competencies
+        </h3>
+        <div
+          class="w-[75px] h-[5px] rounded-full"
+          style={`background-color: ${siteConfig.accentColor}`}
+        ></div>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        {
+          siteConfig.skills.map((pillar) => {
+            const id = pillar.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+            const IconComponent = iconComponents[pillar.icon] ?? CpuIcon;
+            return (
+              <article
+                id={id}
+                aria-labelledby={`${id}-title`}
+                class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/60"
+              >
+                <header class="flex flex-col items-center px-6 pt-8 text-center">
+                  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                    <IconComponent class={`h-6 w-6 ${pillar.iconColor}`} />
                   </div>
-                </section>
-              );
-            })
-          }
-        </div>
+                  <h4
+                    id={`${id}-title`}
+                    class="text-xl font-semibold text-gray-900"
+                  >
+                    {pillar.title}
+                  </h4>
+                </header>
+                <div class="px-6 pb-8">
+                  <div class="relative min-h-[180px] text-center md:text-left">
+                    <p
+                      class="text-sm leading-relaxed text-gray-600 transition-all duration-300 ease-out group-hover:-translate-y-3 group-hover:opacity-0"
+                    >
+                      {pillar.description}
+                    </p>
+                    <ul
+                      class="pointer-events-none absolute inset-0 grid translate-y-4 content-start gap-3 rounded-xl bg-white/90 p-5 text-left text-sm font-medium text-gray-800 opacity-0 shadow-inner ring-1 ring-blue-100 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-hover:shadow-lg group-hover:ring-blue-200 group-hover:pointer-events-auto"
+                    >
+                      {pillar.skills.map((skill) => (
+                        <li class="flex items-center gap-3 rounded-lg bg-gradient-to-r from-blue-50 via-white to-blue-50/40 px-3 py-2 shadow-sm ring-1 ring-blue-100">
+                          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-xs font-semibold text-white">
+                            •
+                          </span>
+                          <span>{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            );
+          })
+        }
       </div>
     </div>
   </div>
