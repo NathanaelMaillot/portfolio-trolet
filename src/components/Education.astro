@@ -1,6 +1,32 @@
 ---
 import { siteConfig } from "../config";
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+
+const baseUrl = (() => {
+  const envBase = import.meta.env.BASE_URL;
+  if (envBase) {
+    return envBase.endsWith("/") ? envBase : `${envBase}/`;
+  }
+
+  if (typeof Astro !== "undefined" && Astro.site) {
+    const pathName = Astro.site.pathname;
+    return pathName.endsWith("/") ? pathName : `${pathName}/`;
+  }
+
+  return "/";
+})();
+
+const normalizeLogo = (logo?: string) => {
+  if (!logo) return undefined;
+  const sanitized = logo.replace(/^\/+/, "");
+  return `${baseUrl}${sanitized}`;
+};
+
+const education = siteConfig.education?.map((edu) => ({
+  ...edu,
+  logoUrl: normalizeLogo(edu.logo),
+}));
+
+const hasEducation = education && education.length > 0;
 ---
 
 {
@@ -25,7 +51,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <div class="lg:col-span-8">
             <div class="space-y-8">
 
-{siteConfig.education.map((edu) => (
+{education?.map((edu) => (
                 <div class="glow-container">
                   <article
                     class="glow-card edu-card-hover group transform transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:border-[var(--accent-color)] bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md relative cursor-pointer"
@@ -34,9 +60,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                     <div class="glows"></div>
                     <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
                       <div class="flex items-center gap-4">
-                        {edu.logo && (
+                        {edu.logoUrl && (
                           <img
-                            src={edu.logo}
+                            src={edu.logoUrl}
                             alt={`${edu.school} logo`}
                             class="w-12 h-12 object-contain flex-shrink-0"
                           />
