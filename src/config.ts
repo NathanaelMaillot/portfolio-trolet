@@ -135,9 +135,6 @@ export const siteConfig = {
   ],
   entrepreneurship: {
     title: "Entrepreneurial & Innovation Programs",
-    shortDescription:
-      "Participated in leading Canadian startup incubators to accelerate Trolet’s technological and business development, combining engineering, strategy, and sustainability.",
-    programs: [
       {
         name: "Centech (ÉTS)",
         location: "Montréal, Canada",
@@ -167,19 +164,12 @@ export const siteConfig = {
           "Participated in Esplanade’s impact incubator program, focusing on sustainability, circular economy, and social innovation. Benefited from mentorship, funding strategies, and access to the Québec sustainability network.",
       },
       {
-        name: "Propolis (Polytechnique Montréal)",
+        name: "Propolys (Polytechnique Montréal)",
         location: "Montréal, Canada",
         focus: "University technology transfer and applied R&D entrepreneurship",
         description:
           "Received tailored support for understanding and optimizing Trolet’s core technology while developing professional connections across Polytechnique’s engineering and research ecosystem.",
       },
-    ],
-    skills: [
-      "Entrepreneurship",
-      "Business Strategy",
-      "Technology Commercialization",
-      "Sustainable Innovation",
-      "Startup Leadership",
     ],
   },
   education: [
