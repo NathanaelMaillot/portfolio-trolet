@@ -215,6 +215,12 @@ export const siteConfig = {
   ],
   awardsAndCompetitions: [
     {
+    year: 2025,
+    title: "Fashion & Apparel Innovation Award",
+    description: "Awarded to Trolet by Vestechpro during Montréal’s Fashion Week (M-MODE) for outstanding technological innovation in the fashion and apparel industry. Recognized for R&D efforts on footwear size standardization and industrial automation.",
+    awardedBy: "Honored by Vestechpro – Montréal Fashion Week (M-MODE)"
+    },
+    {
       year: 2024,
       title: "Stantec Equity & Diversity Scholarship",
       description: "Awarded by Stantec to recognize leadership and contributions promoting diversity and inclusion in engineering.",
