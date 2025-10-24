@@ -11,9 +11,12 @@ export const siteConfig = {
   aboutMe: "Director of Technology & Innovation at Trolet, a Montréal-based startup industrializing the circular economy for second-hand footwear. At the intersection of engineering, automation and strategy, I design the systems, machines and teams that turn circularity into industrial reality. With a background in mechanical engineering and mechatronics from Polytechnique Montréal, I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds from mechatronic design and process automation to data-driven operations and scaling strategy. I built Trolet’s first-generation prototypes (automated shoe cleaning and disinfection systems, RFID-based smart inventory, automated photo rigs) and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems.",
   skills: [
     {
-      category: "Engineering & Automation",
-      color: "bg-emerald-100 text-emerald-800",
-      items: [
+      title: "Engineering & Automation",
+      icon: "cpu",
+      iconColor: "text-emerald-600",
+      description:
+        "Mechanical design, prototyping, and industrial automation — from concept to production-ready systems.",
+      skills: [
         "Mechatronic Design (SolidWorks, Inventor)",
         "Mechanical Fabrication & DFM/DFA",
         "Rapid Prototyping & Testing",
@@ -23,9 +26,12 @@ export const siteConfig = {
       ]
     },
     {
-      category: "Software & Data",
-      color: "bg-indigo-100 text-indigo-800",
-      items: [
+      title: "Software & Data",
+      icon: "code-2",
+      iconColor: "text-indigo-600",
+      description:
+        "Bridging physical systems with digital intelligence — automation, vision, and data pipelines.",
+      skills: [
         "Python Automation & APIs",
         "Computer Vision & ML (attribute extraction)",
         "Data Pipelines & NoSQL Modeling",
@@ -35,9 +41,12 @@ export const siteConfig = {
       ]
     },
     {
-      category: "Operations & Strategy",
-      color: "bg-blue-100 text-blue-800",
-      items: [
+      title: "Operations & Strategy",
+      icon: "trending-up",
+      iconColor: "text-blue-600",
+      description:
+        "Leading innovation through structured processes and multidisciplinary collaboration.",
+      skills: [
         "Technology Strategy & Roadmapping",
         "R&D Leadership & Experimentation",
         "Process Optimization (Lean mindset)",
@@ -47,9 +56,12 @@ export const siteConfig = {
       ]
     },
     {
-      category: "Tooling & Certifications",
-      color: "bg-amber-100 text-amber-800",
-      items: [
+      title: "Tooling & Certifications",
+      icon: "badge-check",
+      iconColor: "text-amber-600",
+      description:
+        "Tools, certifications, and hands-on methods that keep experimentation rigorous and reliable.",
+      skills: [
         "SolidWorks (Advanced Assembly Modeling – SolidExperts)",
         "Autodesk Inventor + Nastran (FEA static/thermal)",
         "Arduino/C++ (control systems)",
