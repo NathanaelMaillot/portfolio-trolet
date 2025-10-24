@@ -179,7 +179,7 @@ export const siteConfig = {
       location: "Montréal, Canada",
       degree: "Bachelor of Engineering – Mechanical Engineering (Mechatronics Orientation)",
       dateRange: "2021 – 2025",
-      logo: "/logos/polytechnique-montreal.svg",
+      logo: "/logos/polytechnique-montreal.jpg",
       achievements: [
         "Specialization in mechanical design, automation, and industrial systems with a focus on sustainable technology.",
         "Led multiple applied R&D projects in robotics, automation, and material science.",
@@ -205,7 +205,7 @@ export const siteConfig = {
     location: "Le Tampon, Réunion Island, France",
     degree: "French Baccalauréat – Science Track (Mathematics & Engineering Sciences)",
     dateRange: "2015 – 2018",
-    logo: "/logos/lycee-roland-garros.png",
+    logo: "/logos/roland-garros.jpg",
     achievements: [
       "Graduated with honors (Mention Bien).",
       "Finalist in the National Engineering Sciences Olympiad (Paris, 2018) — awarded the ‘Prix de l’Innovation Collaborative’ by the Fondation Georges Besse.",
