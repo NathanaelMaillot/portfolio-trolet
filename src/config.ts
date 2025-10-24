@@ -179,7 +179,7 @@ export const siteConfig = {
       location: "Montréal, Canada",
       degree: "Bachelor of Engineering – Mechanical Engineering (Mechatronics Orientation)",
       dateRange: "2021 – 2025",
-      logo: "/logos/polytechnique-montreal.jpg",
+      logo: "public/logos/polytechnique-montreal.jpg",
       achievements: [
         "Specialization in mechanical design, automation, and industrial systems with a focus on sustainable technology.",
         "Led multiple applied R&D projects in robotics, automation, and material science.",
@@ -194,7 +194,7 @@ export const siteConfig = {
       location: "Lyon, France",
       degree: "Classes Préparatoires aux Grandes Écoles (CPGE) – Mathematics, Physics & Engineering Sciences",
       dateRange: "2018 – 2020",
-      logo: "/logos/lmm.png",
+      logo: "public/logos/lmm.png",
       achievements: [
         "Completed two-year intensive preparatory program in advanced mathematics, physics, and engineering sciences.",
         "Conducted a TIPE (Personal Engineering Research Project) on propeller cavitation reduction using CFD simulation in SolidWorks Flow Simulation."
@@ -205,7 +205,7 @@ export const siteConfig = {
     location: "Le Tampon, Réunion Island, France",
     degree: "French Baccalauréat – Science Track (Mathematics & Engineering Sciences)",
     dateRange: "2015 – 2018",
-    logo: "/logos/roland-garros.jpg",
+    logo: "public/logos/roland-garros.jpg",
     achievements: [
       "Graduated with honors (Mention Bien).",
       "Finalist in the National Engineering Sciences Olympiad (Paris, 2018) — awarded the ‘Prix de l’Innovation Collaborative’ by the Fondation Georges Besse.",
