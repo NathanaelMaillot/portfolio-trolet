@@ -1,72 +1,65 @@
 export const siteConfig = {
-  name: "Nathanael Maillot",
-  title: "Director of Technology & Innovation — Engineering Strategy & Industrial Automation",
-  description: "Portfolio of Nathanael Maillot – Designer, builder, and strategic leader driving technical innovation, automation, and sustainable operations at Trolet.",
+  name: "Nathanaël Maillot",
+  title: "Director of Technology & Innovation at TROLET \nEngineering Strategy & Industrial Automation",
+  description: "Portfolio of Nathanaël Maillot – Designer, builder, and strategic leader driving technical innovation, automation, and sustainable operations at Trolet.",
   accentColor: "#1d4ed8",
   social: {
     email: "nathanaelmaillot@trolet.ca",
     linkedin: "https://www.linkedin.com/in/nathanaelmaillot30/",
     github: "https://github.com/NathanaelMaillot",
   },
-  aboutMe: "Director of Technology & Innovation at Trolet, a Montréal-based startup industrializing the circular economy for second-hand footwear. At the intersection of engineering, automation and strategy, I design the systems, machines and teams that turn circularity into industrial reality. With a background in mechanical engineering and mechatronics from Polytechnique Montréal, I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds from mechatronic design and process automation to data-driven operations and scaling strategy. I built Trolet’s first-generation prototypes (automated shoe cleaning and disinfection systems, RFID-based smart inventory, automated photo rigs) and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems.",
+  aboutMe: "I design the systems, machines and teams that turn circularity into industrial reality. I lead Trolet’s technological and operational evolution, connecting the physical and digital worlds from mechatronic design and process automation to data-driven operations and scaling strategy. I built Trolet’s first-generation prototypes  and now lead multidisciplinary teams across software, AI, mechanics and electrical to turn these prototypes into scalable, efficient systems.",
   skills: [
     {
-      title: "Engineering & Automation",
+      title: "Mechanical Systems & Automation",
       icon: "cpu",
       iconColor: "text-emerald-600",
       description:
-        "Mechanical design, prototyping, and industrial automation — from concept to production-ready systems.",
+        "Mechanical design, prototyping, and industrial automation. From concept to production-ready systems.",
       skills: [
-        "Mechatronic Design (SolidWorks, Inventor)",
-        "Mechanical Fabrication & DFM/DFA",
-        "Rapid Prototyping & Testing",
-        "Automation Engineering (motion, sensors)",
-        "RFID Identification & Traceability",
-        "Industrial Workflow Design"
+        "Mechatronic System Design",
+        "Prototyping, Assembly & Mechanical Testing",
+        "FEA Structural & Thermal Simulation",
+        "Automation Systems & Actuator Control",
       ]
     },
     {
-      title: "Software & Data",
+      title: "Software Integration & Data Systems",
       icon: "code-2",
       iconColor: "text-indigo-600",
       description:
-        "Bridging physical systems with digital intelligence — automation, vision, and data pipelines.",
+        "Bridging physical systems with digital intelligence thanks to automation, vision, and data pipelines.",
       skills: [
         "Python Automation & APIs",
-        "Computer Vision & ML (attribute extraction)",
-        "Data Pipelines & NoSQL Modeling",
-        "Cloud & Hosting (Vercel, GCP)",
-        "Frontend Basics (React for ops tools)",
-        "Image-to-Data Integration"
+        "Computer Vision & AI Attribute Extraction",
+        "Image-to-Database Integration Pipelines",
+        "Workflow Automation & Process Monitoring"
       ]
     },
     {
-      title: "Operations & Strategy",
+      title: "Operations & Innovation Strategy",
       icon: "trending-up",
       iconColor: "text-blue-600",
       description:
         "Leading innovation through structured processes and multidisciplinary collaboration.",
       skills: [
-        "Technology Strategy & Roadmapping",
-        "R&D Leadership & Experimentation",
-        "Process Optimization (Lean mindset)",
-        "Cross-Disciplinary Team Management",
-        "Supplier & Vendor Coordination",
-        "Safety, Compliance & QA Thinking"
+        "R&D Program Leadership & Roadmapping",
+        "Engineering Operations Design",
+        "Process Optimization & Lean Thinking",
+        "Cross-Disciplinary Team Management"
       ]
     },
     {
-      title: "Tooling & Certifications",
+      title: "Engineering Tools & Applied Certifications",
       icon: "badge-check",
       iconColor: "text-amber-600",
       description:
         "Tools, certifications, and hands-on methods that keep experimentation rigorous and reliable.",
       skills: [
-        "SolidWorks (Advanced Assembly Modeling – SolidExperts)",
-        "Autodesk Inventor + Nastran (FEA static/thermal)",
-        "Arduino/C++ (control systems)",
-        "Git & CI basics for internal tools",
-        "Measurement & Test (mechanical, materials)"
+        "SolidWorks Advanced Assembly Certified",
+        "Applied Engineering Standards (ISO, CSA, ASTM)",
+        "Design Documentation & Technical Reporting",
+        "Safety & Compliance in Engineering Environments"
       ]
     }
   ],

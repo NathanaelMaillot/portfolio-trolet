@@ -8,9 +8,8 @@ const hasAwards = siteConfig.awardsAndCompetitions && siteConfig.awardsAndCompet
     class="p-8 sm:p-12 md:p-16 lg:p-24"
     style={`--accent-color: ${siteConfig.accentColor}; --accent-color-light: #3b82f6; --accent-color-dark: #1e40af;`}
   >
-    <div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-        <div class="lg:col-span-4">
+      <div class="space-y-12">
+        <div class="max-w-3xl">
           <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900">
             Awards & Competitions
           </h2>
@@ -19,30 +18,155 @@ const hasAwards = siteConfig.awardsAndCompetitions && siteConfig.awardsAndCompet
             style="background-color: var(--accent-color)"
           />
         </div>
-        <div class="lg:col-span-8">
-          <div class="space-y-8">
-            {siteConfig.awardsAndCompetitions.map((award) => (
-              <div class="glow-container">
-                <article class="glow-card bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-all duration-300 relative cursor-pointer">
-                  <div class="glows"></div>
-                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                    <div>
-                      <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
-                        {award.title}
-                      </h3>
-                      <p class="text-base sm:text-lg" style="color: var(--accent-color)">
-                        {award.awardedBy}
-                      </p>
+        <div>
+          <div
+            class="relative"
+            data-awards-carousel
+          >
+            <div class="pointer-events-none absolute inset-y-4 left-0 w-12 bg-gradient-to-r from-white via-white/80 to-transparent hidden sm:block"></div>
+            <div class="pointer-events-none absolute inset-y-4 right-0 w-12 bg-gradient-to-l from-white via-white/80 to-transparent hidden sm:block"></div>
+            <div
+              class="[&::-webkit-scrollbar]:hidden [scrollbar-width:none] overflow-hidden"
+            >
+              <div
+                class="flex gap-6 md:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
+                data-awards-track
+              >
+                {siteConfig.awardsAndCompetitions.map((award) => (
+                  <article
+                    class="group relative flex min-h-full flex-col gap-4 overflow-hidden rounded-3xl border border-slate-200 bg-white/80 p-5 sm:p-6 md:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent-color)]/60 hover:shadow-xl snap-start shrink-0 basis-full sm:basis-[70%] md:basis-[55%] lg:basis-[45%] xl:basis-[33%]"
+                  >
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                      <div>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                          {award.title}
+                        </h3>
+                        <p class="text-base sm:text-lg" style="color: var(--accent-color)">
+                          {award.awardedBy}
+                        </p>
+                      </div>
+                      <span class="text-xs sm:text-sm text-gray-500 mt-0.5 sm:mt-0">
+                        {award.year}
+                      </span>
                     </div>
-                    <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">{award.year}</span>
-                  </div>
-                  <p class="text-sm sm:text-base text-gray-600">{award.description}</p>
-                </article>
+                    <p class="text-sm sm:text-base text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
+                      {award.description}
+                    </p>
+                  </article>
+                ))}
               </div>
-            ))}
+            </div>
+            <div class="mt-6 flex items-center justify-end gap-4">
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-gray-700 shadow-sm transition-all duration-300 hover:border-[var(--accent-color)]/60 hover:text-[var(--accent-color)] hover:shadow-lg disabled:pointer-events-none disabled:opacity-40"
+                aria-label="Previous award"
+                data-awards-prev
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                >
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-gray-700 shadow-sm transition-all duration-300 hover:border-[var(--accent-color)]/60 hover:text-[var(--accent-color)] hover:shadow-lg disabled:pointer-events-none disabled:opacity-40"
+                aria-label="Next award"
+                data-awards-next
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 )}
+
+<script>
+  const initAwardsCarousel = () => {
+    const carousels = document.querySelectorAll("[data-awards-carousel]");
+
+    carousels.forEach((carousel) => {
+      const track = carousel.querySelector("[data-awards-track]");
+      const prev = carousel.querySelector("[data-awards-prev]");
+      const next = carousel.querySelector("[data-awards-next]");
+      if (!track || !prev || !next) return;
+
+      const slides = Array.from(track.children);
+      if (slides.length <= 1) {
+        prev.style.display = "none";
+        next.style.display = "none";
+      }
+
+      const getStep = () => {
+        if (slides.length > 1) {
+          return slides[1].offsetLeft - slides[0].offsetLeft;
+        }
+        const first = slides[0];
+        return first ? first.getBoundingClientRect().width : track.clientWidth;
+      };
+
+      const updateButtons = () => {
+        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+        const tolerance = 8;
+        prev.disabled = track.scrollLeft <= tolerance;
+        next.disabled = track.scrollLeft >= maxScrollLeft - tolerance;
+      };
+
+      const scrollByStep = (direction) => {
+        const step = getStep();
+        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+        const target = track.scrollLeft + step * direction;
+        track.scrollTo({
+          left: Math.max(0, Math.min(target, maxScrollLeft)),
+          behavior: "smooth",
+        });
+      };
+
+      prev.addEventListener("click", () => scrollByStep(-1));
+      next.addEventListener("click", () => scrollByStep(1));
+
+      track.addEventListener("scroll", () => {
+        window.requestAnimationFrame(updateButtons);
+      });
+
+      if (typeof ResizeObserver !== "undefined") {
+        const resizeObserver = new ResizeObserver(() => updateButtons());
+        resizeObserver.observe(track);
+      } else {
+        window.addEventListener("resize", updateButtons, { passive: true });
+      }
+
+      updateButtons();
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAwardsCarousel, {
+      once: true,
+    });
+  } else {
+    initAwardsCarousel();
+  }
+</script>
