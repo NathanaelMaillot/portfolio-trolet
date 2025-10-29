@@ -142,6 +142,7 @@ const hasAwards = siteConfig.awardsAndCompetitions && siteConfig.awardsAndCompet
           left: Math.max(0, Math.min(target, maxScrollLeft)),
           behavior: "smooth",
         });
+        window.requestAnimationFrame(updateButtons);
       };
 
       prev.addEventListener("click", () => scrollByStep(-1));
@@ -155,7 +156,9 @@ const hasAwards = siteConfig.awardsAndCompetitions && siteConfig.awardsAndCompet
         const resizeObserver = new ResizeObserver(() => updateButtons());
         resizeObserver.observe(track);
       } else {
-        window.addEventListener("resize", updateButtons, { passive: true });
+        window.addEventListener("resize", updateButtons, {
+          passive: true,
+        });
       }
 
       updateButtons();
