@@ -50,7 +50,7 @@ export const siteConfig = {
       ]
     },
     {
-      title: "Engineering Tools & Applied Certifications",
+      title: "Engineering Tools & Certifications",
       icon: "badge-check",
       iconColor: "text-amber-600",
       description:
@@ -96,7 +96,7 @@ export const siteConfig = {
       name: "TroStock — Smart Inventory & Operations Platform",
       description:
         "Designed and led TroStock, Trolet’s platform that connects RFID-based identification, live inventory, and data analytics to manage footwear revalorization end-to-end. Each pair receives a unique SKU updated in real time at every stage, enabling full traceability and smarter decision-making. Now the data-driven backbone powering Trolet’s circular operations.",
-      link: "#",
+      link: "/projects/trostock",
       skills: ["RFID Integration", "Operational Intelligence", "Cloud & Frontend Sync", "System Architecture", "Data-Driven Operations"],
     },
   ],
