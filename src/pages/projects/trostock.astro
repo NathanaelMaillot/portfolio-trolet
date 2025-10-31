@@ -11,22 +11,18 @@ const basePath = rawBasePath === "/" ? "" : rawBasePath.replace(/\/$/, "");
 const projectsLink = `${basePath}/#projects`;
 
 const trostockProject =
-  siteConfig.projects.find((project) =>
-    project.name.toLowerCase().includes("trostock")
-  ) ?? {
+  siteConfig.projects.find((p) => p.name.toLowerCase().includes("trostock")) ?? {
     name: "TroStock — Smart Inventory & Operations Platform",
     description:
-      "Designed and led TroStock, Trolet’s platform that connects RFID-based identification, live inventory, and data analytics to manage footwear revalorization end-to-end. Each pair receives a unique SKU updated in real time at every stage, enabling full traceability and smarter decision-making. Now the data-driven backbone powering Trolet’s circular operations.",
+      "TroStock connects RFID tagging, live inventory and analytics to orchestrate Trolet’s circular operations end‑to‑end. Each pair receives a unique SKU updated at every stage — delivering full traceability, fewer errors, and faster decisions.",
     skills: [
       "RFID Integration",
       "Operational Intelligence",
       "Cloud & Frontend Sync",
       "System Architecture",
-      "Data-Driven Operations",
+      "Data‑Driven Operations",
     ],
   };
-
-const entrepreneurshipPrograms = siteConfig.entrepreneurship?.programs ?? [];
 ---
 
 <html lang="en">
@@ -40,282 +36,239 @@ const entrepreneurshipPrograms = siteConfig.entrepreneurship?.programs ?? [];
       name="description"
       content="TroStock — Smart inventory and operations platform engineered by Nathanaël Maillot at Trolet."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
     <title>TroStock — {siteConfig.name}</title>
+    <style>
+      /* Accent token */
+      :root { --accent: {accentColor}; }
+      /* Micro‑animation for architecture flow */
+      .flow { stroke: var(--accent); stroke-width: 2; stroke-linecap: round; }
+      .flow.dashed { stroke-dasharray: 4 8; animation: dash 4s linear infinite; }
+      .pulse { fill: var(--accent); animation: pulse 2.2s ease-in-out infinite; }
+      @keyframes dash { to { stroke-dashoffset: -200; } }
+      @keyframes pulse { 0%,100%{ opacity:.25; r:4 } 50%{ opacity:1; r:6 } }
+      .glass { background: rgba(255,255,255,.6); backdrop-filter: blur(10px); }
+    </style>
   </head>
   <body class="bg-white text-gray-900">
     <Header />
 
     <main>
+      <!-- HERO -->
       <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white">
         <div class="p-8 sm:p-12 md:p-16 lg:p-24">
-          <div class="mx-auto flex max-w-5xl flex-col gap-8">
+          <div class="mx-auto flex max-w-6xl flex-col gap-8">
             <div class="flex flex-wrap items-center justify-between gap-4 text-sm">
-              <a
-                href={projectsLink}
-                class="inline-flex items-center gap-2 font-medium text-gray-600 transition-colors duration-200 hover:text-gray-900"
-              >
-                <span aria-hidden="true">←</span>
-                Back to projects
+              <a href={projectsLink} class="inline-flex items-center gap-2 font-medium text-gray-600 transition-colors hover:text-gray-900">
+                <span aria-hidden="true">←</span> Back to projects
               </a>
-              <span class="font-mono text-xs uppercase tracking-wide text-gray-500">
-                Project Spotlight
-              </span>
+              <span class="font-mono text-xs uppercase tracking-wide text-gray-500">Project Spotlight</span>
             </div>
 
             <div class="space-y-6">
               <div class="space-y-4">
-                <span
-                  class="inline-flex items-center rounded-full bg-gray-900 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white"
-                >
-                  {trostockProject.name.split(" — ")[0]}
+                <span class="inline-flex items-center rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white" style={`background-color: ${accentColor}`}>
+                  TroStock
                 </span>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-gray-900">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
                   {trostockProject.name}
                 </h1>
-                <p class="max-w-3xl text-lg sm:text-xl text-gray-600">
-                  {trostockProject.description}
-                </p>
+                <p class="max-w-3xl text-lg sm:text-xl text-gray-600">{trostockProject.description}</p>
               </div>
 
+              <!-- Quick Facts -->
               <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
-                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                    Role
-                  </p>
-                  <p class="mt-2 text-sm font-medium text-gray-900">
-                    Director of Technology & Innovation, Trolet
-                  </p>
+                <div class="rounded-2xl border border-gray-200 glass p-5 shadow-sm">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Role</p>
+                  <p class="mt-2 text-sm font-medium">Technical Co‑Founder & Lead R&D</p>
                 </div>
-                <div class="rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
-                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                    Timeline
-                  </p>
-                  <p class="mt-2 text-sm font-medium text-gray-900">
-                    2023 – Present
-                  </p>
+                <div class="rounded-2xl border border-gray-200 glass p-5 shadow-sm">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Timeline</p>
+                  <p class="mt-2 text-sm font-medium">2023 – Present</p>
                 </div>
-                <div class="rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
-                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                    Status
-                  </p>
-                  <p class="mt-2 text-sm font-medium text-gray-900">
-                    In production powering Trolet operations
-                  </p>
+                <div class="rounded-2xl border border-gray-200 glass p-5 shadow-sm">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Stack</p>
+                  <p class="mt-2 text-sm font-medium">React/Next · Spring Boot on Cloud Run · DynamoDB · Backblaze B2</p>
                 </div>
-                <div class="rounded-2xl border border-gray-200 bg-white/80 p-5 shadow-sm">
-                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                    Domain
-                  </p>
-                  <p class="mt-2 text-sm font-medium text-gray-900">
-                    Circular logistics & operational intelligence
-                  </p>
+                <div class="rounded-2xl border border-gray-200 glass p-5 shadow-sm">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Channels</p>
+                  <p class="mt-2 text-sm font-medium">Shopify · eBay (webhooks)</p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      <section class="p-8 sm:p-12 md:p-16 lg:p-24">
-        <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[2fr,1fr] lg:items-start">
-          <div class="space-y-10">
-            <div class="space-y-5">
-              <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900">
-                Project Overview
-              </h2>
-              <p class="text-base sm:text-lg leading-relaxed text-gray-600">
-                Circular footwear operations demand traceability across intake, cleaning, quality,
-                pricing, and resale. TroStock stitches these stages together by pairing RFID-based
-                identification with a live operational data layer. Every pair of shoes receives a
-                unique digital identity, synchronized automatically as it flows through Trolet’s
-                physical systems and digital touchpoints. The result is a single source of truth that
-                eliminates blind spots, reduces manual input, and unlocks smarter decision-making for
-                technicians, operators, and leadership.
-              </p>
-            </div>
-
-            <div class="space-y-6">
-              <h3 class="text-xl font-semibold text-gray-900">Core Capabilities</h3>
-              <div class="grid gap-4 sm:grid-cols-2">
-                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-                  <h4 class="text-base font-semibold text-gray-900">RFID traceability</h4>
-                  <p class="mt-3 text-sm text-gray-600">
-                    Each pair is tagged and tracked in real time, ensuring full visibility from
-                    intake to sale. TroStock keeps identifiers synchronized across cleaning,
-                    disinfection, photography, and listing workflows.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-                  <h4 class="text-base font-semibold text-gray-900">Operational intelligence</h4>
-                  <p class="mt-3 text-sm text-gray-600">
-                    Dashboards and alerts surface the status of every batch, highlight bottlenecks,
-                    and feed historical data back into strategy, supporting Trolet’s continuous
-                    improvement cycles.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-                  <h4 class="text-base font-semibold text-gray-900">Cloud & frontline sync</h4>
-                  <p class="mt-3 text-sm text-gray-600">
-                    Operators receive the same information as leadership. TroStock bridges shop-floor
-                    equipment with cloud services, keeping handheld tools, workstations, and business
-                    systems aligned.
-                  </p>
-                </div>
-                <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-                  <h4 class="text-base font-semibold text-gray-900">Scalable architecture</h4>
-                  <p class="mt-3 text-sm text-gray-600">
-                    Designed as a modular backbone, the platform adapts to new automation cells,
-                    analytics modules, and marketplace integrations as Trolet expands.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="space-y-6">
-              <h3 class="text-xl font-semibold text-gray-900">My Responsibilities</h3>
-              <ul class="space-y-4 text-sm sm:text-base leading-relaxed text-gray-600">
-                <li>
-                  Defined the end-to-end system architecture connecting RFID hardware, automated
-                  equipment, and cloud services into a cohesive platform.
-                </li>
-                <li>
-                  Led cross-disciplinary teams—software, AI, mechanical, electrical, and operations—to
-                  ship production-ready features and iterate quickly on feedback from the floor.
-                </li>
-                <li>
-                  Built the first generation of supporting automation: the shoe cleaning and
-                  disinfection cells, automated photography rig, bulk listing tools, and testing bins
-                  that feed structured data into TroStock.
-                </li>
-                <li>
-                  Operationalized data-driven workflows that reduce manual work, standardize quality,
-                  and surface insights for inventory planning and resale strategy.
-                </li>
-              </ul>
-            </div>
+      <!-- STORYTELLING / CONTEXT -->
+      <section class="px-8 sm:px-12 md:px-16 lg:px-24 py-12">
+        <div class="mx-auto max-w-5xl space-y-6">
+          <h2 class="text-2xl sm:text-3xl font-semibold">Why TroStock</h2>
+          <p class="text-base sm:text-lg leading-relaxed text-gray-600">
+            Circular footwear operations span intake, disinfection, cleaning, repair, photography and listing. Without a connected system, information fragments and errors grow. I led the design of TroStock to be the digital nervous system that unifies people, machines and data — so every pair is traceable, every step measurable, and every decision faster.
+          </p>
+          <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+            <p class="text-gray-700"><strong>My signature:</strong> I orchestrated the end‑to‑end architecture, championed RFID over barcodes, designed the operational workflows, and led the team delivering a cloud‑native platform that runs seamlessly on tablets in the workshop — while syncing images, attributes and listings to the cloud and sales channels.</p>
           </div>
-
-          <aside class="space-y-8">
-            <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-              <h3 class="text-lg font-semibold text-gray-900">Focus Areas</h3>
-              <div class="mt-4 flex flex-wrap gap-2">
-                {trostockProject.skills?.map((skill) => (
-                  <span
-                    class="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-xs font-medium text-white"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-              <h3 class="text-lg font-semibold text-gray-900">Supporting Programs</h3>
-              <p class="mt-2 text-sm text-gray-600">
-                TroStock’s roadmap was strengthened through entrepreneurial programs focused on
-                commercialization, hardware development, and circular impact.
-              </p>
-              <ul class="mt-4 space-y-3 text-sm text-gray-600">
-                {entrepreneurshipPrograms.map((program) => (
-                  <li class="rounded-xl bg-gray-50 px-4 py-3">
-                    <p class="font-medium text-gray-900">{program.name}</p>
-                    <p class="text-xs uppercase tracking-wide text-gray-500">
-                      {program.location} · {program.focus}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
         </div>
       </section>
 
-      <section
-        class="relative overflow-hidden border-t border-gray-200 bg-gradient-to-br from-white via-slate-50 to-white py-16 sm:py-20"
-        style={`--accent-color: ${accentColor}`}
-      >
-        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-8 sm:px-12 md:px-16 lg:px-24">
-          <div class="max-w-4xl space-y-5">
-            <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900">
-              Impact & Outcomes
-            </h2>
-            <p class="text-base sm:text-lg leading-relaxed text-gray-600">
-              TroStock is more than a database: it is the digital nervous system of Trolet’s
-              circular supply chain. By grounding every decision in real-time data, the platform turns
-              prototypes into scalable processes. Teams move faster, quality is standardized, and
-              partners and investors gain confidence through traceable operations. This work was
-              recognized by Vestechpro’s Fashion & Apparel Innovation Award at Montréal Fashion Week,
-              highlighting Trolet’s leap from experimentation to industrial execution.
-            </p>
+      <!-- ARCHITECTURE with micro‑animation -->
+      <section class="px-8 sm:px-12 md:px-16 lg:px-24 py-12">
+        <div class="mx-auto max-w-6xl grid gap-10 lg:grid-cols-[1.2fr,1fr] lg:items-center">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4">System Architecture</h2>
+            <p class="text-gray-600 mb-6">Tablet‑first web app (React/Next) for operators → Spring Boot API on Cloud Run → DynamoDB for operational data → Backblaze B2 for image storage → Shopify & eBay for listings. RFID read/write assigns a unique SKU that travels through each operation.</p>
+            <svg viewBox="0 0 780 280" class="w-full rounded-2xl border border-gray-200 bg-white p-4">
+              <!-- Nodes -->
+              <g font-family="ui-sans-serif, system-ui" font-size="12" fill="#111827">
+                <rect x="24" y="28" rx="14" ry="14" width="180" height="60" fill="#F8FAFC" stroke="#E5E7EB"/>
+                <text x="114" y="56" text-anchor="middle">Operator Tablet</text>
+                <text x="114" y="72" text-anchor="middle">React / Next.js</text>
+
+                <rect x="280" y="28" rx="14" ry="14" width="200" height="60" fill="#F8FAFC" stroke="#E5E7EB"/>
+                <text x="380" y="56" text-anchor="middle">Spring Boot API</text>
+                <text x="380" y="72" text-anchor="middle">Cloud Run (GCP)</text>
+
+                <rect x="560" y="18" rx="14" ry="14" width="196" height="60" fill="#F8FAFC" stroke="#E5E7EB"/>
+                <text x="658" y="46" text-anchor="middle">DynamoDB</text>
+                <text x="658" y="62" text-anchor="middle">Operational Data</text>
+
+                <rect x="560" y="102" rx="14" ry="14" width="196" height="60" fill="#F8FAFC" stroke="#E5E7EB"/>
+                <text x="658" y="130" text-anchor="middle">Backblaze B2</text>
+                <text x="658" y="146" text-anchor="middle">Image Storage</text>
+
+                <rect x="280" y="170" rx="14" ry="14" width="200" height="60" fill="#F8FAFC" stroke="#E5E7EB"/>
+                <text x="380" y="198" text-anchor="middle">Sales Channels</text>
+                <text x="380" y="214" text-anchor="middle">Shopify · eBay</text>
+
+                <rect x="24" y="170" rx="14" ry="14" width="180" height="60" fill="#F8FAFC" stroke="#E5E7EB"/>
+                <text x="114" y="198" text-anchor="middle">RFID Read/Write</text>
+                <text x="114" y="214" text-anchor="middle">Unique SKU</text>
+              </g>
+
+              <!-- Flows -->
+              <path class="flow dashed" d="M204 58 H280" />
+              <circle class="pulse" cx="204" cy="58" r="4" />
+
+              <path class="flow dashed" d="M480 58 H560" />
+              <circle class="pulse" cx="480" cy="58" r="4" />
+
+              <path class="flow dashed" d="M480 58 V200 H480" />
+              <path class="flow dashed" d="M560 132 H480" />
+
+              <path class="flow dashed" d="M204 200 H280" />
+              <circle class="pulse" cx="204" cy="200" r="4" />
+
+              <path class="flow dashed" d="M380 170 V88" />
+            </svg>
           </div>
 
+          <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm space-y-4">
+            <h3 class="text-lg font-semibold">Tech Environment</h3>
+            <ul class="text-sm text-gray-700 space-y-2">
+              <li><strong>Frontend</strong>: React/Next.js · TypeScript · Tailwind · React Query</li>
+              <li><strong>Backend</strong>: GraphQL · Spring Boot (Java) · Lombok · Cloud Run</li>
+              <li><strong>Database</strong>: DynamoDB (NoSQL)</li>
+              <li><strong>Images</strong>: Backblaze B2</li>
+              <li><strong>Integrations</strong>: Shopify & eBay (webhooks) · RFID/NFC (scan via web/app)</li>
+              <li><strong>Production</strong>: Vercel · Google Cloud · GitHub Actions · Docker</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPABILITIES -->
+      <section class="px-8 sm:px-12 md:px-16 lg:px-24 py-12">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Core Capabilities</h2>
           <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Traceability
-              </p>
-              <p class="mt-3 text-sm text-gray-600">
-                Full-chain visibility across intake, refurbishment, and resale enables faster audits
-                and transparent storytelling with brand partners.
-              </p>
+              <h4 class="font-semibold">RFID Traceability</h4>
+              <p class="text-sm text-gray-600 mt-2">100% of pairs are tagged with a reusable RFID chip; SKU is read/written across every operation.</p>
             </div>
             <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Operational Efficiency
-              </p>
-              <p class="mt-3 text-sm text-gray-600">
-                Integrated workflows connect machinery and teams, reducing manual transcription and
-                unlocking automation opportunities at every stage.
-              </p>
+              <h4 class="font-semibold">Workflow Synchronization</h4>
+              <p class="text-sm text-gray-600 mt-2">Operator tablets keep intake → cleaning → repair → photography → listing in sync with the cloud.</p>
             </div>
             <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Strategic Insight
-              </p>
-              <p class="mt-3 text-sm text-gray-600">
-                Decision-makers rely on live dashboards and historical data to plan inventory,
-                allocate labor, and assess new growth channels with confidence.
-              </p>
+              <h4 class="font-semibold">Real‑Time Analytics</h4>
+              <p class="text-sm text-gray-600 mt-2">Dashboards show pairs/hour, types processed, repair categories, and operation times for decisions.</p>
             </div>
             <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Circular Impact
-              </p>
-              <p class="mt-3 text-sm text-gray-600">
-                By enabling reliable refurbishment at scale, TroStock helps keep footwear in
-                circulation longer—advancing Trolet’s mission for a cleaner industry.
-              </p>
+              <h4 class="font-semibold">Channel Integrations</h4>
+              <p class="text-sm text-gray-600 mt-2">Listings published to Shopify & eBay; images stored on B2 with attribute assistance for faster go‑live.</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ROLE & LEADERSHIP -->
+      <section class="px-8 sm:px-12 md:px-16 lg:px-24 py-12">
+        <div class="mx-auto max-w-6xl grid gap-10 lg:grid-cols-2">
+          <div class="space-y-4">
+            <h2 class="text-2xl sm:text-3xl font-semibold">My Role & Leadership</h2>
+            <p class="text-gray-700">As Trolet’s sole technical co‑founder, I led TroStock’s R&D and delivery — from architecture to field deployment. I mapped operations, defined user actions per step, championed RFID adoption, tested and validated read/write & chip recycling, selected the tablet hardware, and integrated software with workshop realities.</p>
+            <ul class="list-disc ml-5 text-gray-700 space-y-2">
+              <li>Designed the end‑to‑end architecture (RFID → API → DB → channels).</li>
+              <li>Led developers and coordinated cross‑disciplinary efforts (software, operations, hardware integration).</li>
+              <li>Chose Backblaze B2 for image storage and structured listing pipelines.</li>
+              <li>Delivered a tablet‑first UX to minimize friction and speed throughput.</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold mb-4">KPI Highlights</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="glass rounded-xl border border-gray-200 p-4">
+                <div class="text-3xl font-bold" style={`color: ${accentColor}`}>100%</div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Pairs tagged & traceable</p>
+              </div>
+              <div class="glass rounded-xl border border-gray-200 p-4">
+                <div class="text-3xl font-bold" style={`color: ${accentColor}`}>−70%</div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Fewer inventory errors/losses</p>
+              </div>
+              <div class="glass rounded-xl border border-gray-200 p-4">
+                <div class="text-3xl font-bold" style={`color: ${accentColor}`}>Live</div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Dashboards & operation stats</p>
+              </div>
+              <div class="glass rounded-xl border border-gray-200 p-4">
+                <div class="text-3xl font-bold" style={`color: ${accentColor}`}>Connected</div>
+                <p class="text-xs uppercase tracking-wide text-gray-500">Shopify & eBay webhooks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOOKING AHEAD -->
+      <section class="px-8 sm:px-12 md:px-16 lg:px-24 py-12">
+        <div class="mx-auto max-w-6xl space-y-6">
+          <h2 class="text-2xl sm:text-3xl font-semibold">Looking Ahead</h2>
+          <p class="text-gray-700">Next up: AI‑assisted attribute extraction, predictive operations (throughput & staffing), deeper marketplace integrations, and ESG reporting — all building on TroStock’s modular, data‑first foundation.</p>
+          <div class="rounded-2xl border border-gray-200 bg-white p-6">
+            <h3 class="font-semibold mb-2">Assistant & AI Path</h3>
+            <p class="text-gray-700 text-sm">A virtual assistant already accelerates attribute entry so operations keep flowing while AI models are being developed. The roadmap upgrades this to automated extraction and validation from images and context.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AWARD -->
+      <section class="px-8 sm:px-12 md:px-16 lg:px-24 py-8">
+        <div class="mx-auto max-w-6xl rounded-2xl border border-gray-200 bg-white p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div class="text-2xl">🏆</div>
+          <div>
+            <p class="font-semibold">Fashion & Apparel Innovation Award — Vestechpro, Montréal Fashion Week</p>
+            <p class="text-gray-600 text-sm">Recognized for TroStock’s innovation in operational intelligence and circular traceability.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
       <section class="p-8 sm:p-12 md:p-16 lg:p-24">
         <div class="mx-auto max-w-5xl space-y-6 rounded-3xl border border-gray-200 bg-white p-8 sm:p-12 shadow-sm">
-          <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900">
-            Looking Ahead
-          </h2>
-          <p class="text-base sm:text-lg leading-relaxed text-gray-600">
-            The next phase for TroStock is to expand its integrations with marketplaces, predictive
-            analytics, and partner APIs. By keeping the system modular and data-first, every new
-            capability—from dynamic pricing models to sustainability reporting—connects seamlessly to
-            the foundation already in place.
-          </p>
-          <p class="text-base sm:text-lg leading-relaxed text-gray-600">
-            Interested in collaborating on circular logistics or large-scale inventory intelligence?
-            Let’s build the next layer together.
-          </p>
-          <a
-            href="#contact"
-            class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white transition-all duration-300"
-            style={`background-color: ${accentColor}`}
-          >
+          <h2 class="text-2xl sm:text-3xl font-semibold">Let’s build the next layer</h2>
+          <p class="text-base sm:text-lg leading-relaxed text-gray-600">Interested in data‑driven circular logistics or large‑scale inventory intelligence? I’m open to discussions with mentors, partners and technical collaborators.</p>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white transition-colors" style={`background-color: ${accentColor}`}>
             Start a conversation
           </a>
         </div>
